@@ -3,3 +3,13 @@
 *{
     font-family: 'Chakra Petch', sans-serif;
 }
+
+#register-btn{
+    font-weight: 900;
+    font-size: 3vh;
+}
+strong{
+    color: #000;
+    font-weight: 900;
+    font-size: 5vh;
+}
