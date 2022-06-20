@@ -20,7 +20,7 @@ def register(request):
         password2= request.POST['password2']
         
         if password1 != password2:
-            messages.error(request,"check your passwords")
+            messages.error(request,"Check your passwords to make sure they match")
             return redirect('/register')
         
         new_user = User.objects.create_user(first_name=first_name,last_name=last_name,username=username,email=email,password=password1)

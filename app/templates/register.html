@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class="container-fluid d-flex justify-content-center align-items-center" id="register-page">
   <section class="mb-5">
@@ -11,7 +12,7 @@
       <div>
         {% if messages %}
             {% for message in messages %} 
-            <div class="alert {{message.tags}} m-1" role="alert" style="font-size: medium;">
+            <div class="alert {{message.tags}} m-1 alert-danger mb-3" role="alert" style="font-size: medium;">
                 {{message}}
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
