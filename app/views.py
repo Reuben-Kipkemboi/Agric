@@ -15,3 +15,7 @@ def register(request):
 def user_login(request):
     return render (request, 'login.html')
 
+#logout function
+def user_logout(request):
+    return render (request, 'login.html')
+
