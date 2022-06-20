@@ -36,12 +36,8 @@
         <!-- Left links -->
   
         <div class="d-flex align-items-center">
-          <button type="button" class="btn btn-primary px-3 me-2">
-            Login
-          </button>
-          <button type="button" class="btn btn-primary me-3">
-            Sign up for free
-          </button>
+            <a href="{% url 'login' %}" class="btn btn-primary px-3 me-2">Login</a>
+          <a href="{% url 'register' %}"> class="btn btn-primary me-3">Sign up for free</a>
           <a class="navbar-brand me-2" href="/">
             <img
               src="{% static 'images/trac.png'%}"

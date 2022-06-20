@@ -39,7 +39,7 @@ def user_login(request):
         user = authenticate (request,username=username,password=password)
         if user is not None:
             login(request,user)
-            messages.success(request,"Welcome , you are now logged in")
+            messages.success(request,"Welcome ,you are now logged in")
             return redirect ("home")
     return render (request, 'login.html')
 
