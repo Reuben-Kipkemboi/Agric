@@ -27,3 +27,11 @@ strong{
 #logo-login{
     height: 100px;
 }
+#logo{
+    height: 30px;
+    width: 30px;
+
+}
+#nav{
+    background-color: #e3f2fd;
+}
