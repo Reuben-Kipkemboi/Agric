@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect
+from .models import * 
+from django.contrib import messages
+from django.contrib.auth import authenticate, login,logout
 
 # APPLICATION VIEWS.
 
@@ -8,6 +11,22 @@ def home(request):
 
 #Register function
 def register(request):
+    if request.method =='POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        username = request.POST['username']
+        email = request.POST['email']
+        password1 = request.POST['password1']
+        password2= request.POST['password2']
+        
+        if password1 != password2:
+            messages.error(request,"check your passwords")
+            return redirect('/register')
+        
+        new_user = User.objects.create_user(first_name=first_name,last_name=last_name,username=username,email=email,password=password1)
+        
+        new_user.save()
+        return redirect ('login') 
     return render (request, 'register.html')
 
 
