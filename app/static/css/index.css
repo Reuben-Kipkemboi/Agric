@@ -13,3 +13,17 @@ strong{
     font-weight: 900;
     font-size: 5vh;
 }
+#login-slogan{
+    color: #000;
+    font-weight: 900;
+    font-size: 5vh;
+    text-align: center;
+    padding: 3%;
+}
+#login-form{
+    font-size: 3vh;
+    font-weight: 600;
+}
+#logo-login{
+    height: 100px;
+}
