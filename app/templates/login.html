@@ -3,6 +3,18 @@
 {% block content %}
 <div class="container-fluid d-flex justify-content-center align-items-center" id="login-page">
     <div class="col-md-5 mx-auto">
+        <div>
+            {% if messages %}
+                {% for message in messages %} 
+                <div class="alert {{message.tags}} m-1" role="alert" style="font-size: medium;">
+                    {{message}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endfor %} 
+            {% endif %}
+        </div>
         <div class="card login-card px-5 pt-2">
             <p class="text-center">
                 <img src="{% static 'images/trac.png'%}" alt="logo" id="logo-login">

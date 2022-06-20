@@ -8,6 +8,19 @@
         <strong>OKOA TIME OKOA FARM</strong>
       </h4>
 
+      <div>
+        {% if messages %}
+            {% for message in messages %} 
+            <div class="alert {{message.tags}} m-1" role="alert" style="font-size: medium;">
+                {{message}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endfor %} 
+        {% endif %}
+    </div>
+
       <form action="{% url 'register' %}" method="POST">
 
         {% csrf_token %}
