@@ -19,6 +19,8 @@ urlpatterns = [
     
     path('profile/', views.profile, name='profile'),
     
+    path('update_profile/', views.update_profile, name ='update'),
+    
     path('owner_home/', views.owners, name='owner'),
     
 ]
