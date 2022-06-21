@@ -1,3 +1,4 @@
+from importlib import machinery
 from django.db import models
 # from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
@@ -59,20 +60,72 @@ class Machinery(models.Model):
     operator_name = models.CharField(max_length=50 , null=True)
     
     
+    def save_machinery(self):
+        self.save()
+
+    def update_machinery(self):
+        self.update()
+
+    def delete_farm(self):
+        self.delete()
+        
+    @classmethod
+    def find_machinery(cls,machinery_id):
+        new_machinery = cls.objects.filter(machinery_id=machinery_id)
+        return new_machinery
+
     def __str__(self):
         return self.machinery_name
     
+    
+class Owner_post(models.Model):
+    machinery_name=models.CharField(max_length=100,null=True,blank=True)
+    machinery_image=CloudinaryField('machinery_image',blank=True)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="post",null=True,blank=True)
+    describe=models.TextField(null=False)
+    posted_at=models.DateTimeField(auto_now_add=True,)
+    pay_rate=models.CharField(max_length=100,null=True,blank=True)
+
+    def save_owner_post(self):
+        self.save()
+
+    def delete_owner_post(self):
+        self.delete()
+
+    def update_owner_post(self,id,owner_post):
+        updated_post=Owner_post.objects.filter(id=id).update(owner_post)
+        return updated_post
+
+
+    def __str__(self):
+        return self.machinery_name
 class Order(models.Model):
     customer_name = models.CharField(max_length=100)
     cell_no = models.CharField(max_length=15)
     address = models.TextField()
     date = models.DateTimeField()
     machinery_id = models.ForeignKey(Machinery, on_delete=models.CASCADE, null=True)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     
+    def save_order(self):
+        self.save()
+
+    def delete_order(self):
+        self.delete()
+
+    def update_order(self,id,order):
+        updated_order=Order.objects.filter(id=id).update(order)
+        return updated_order
+
+
     def __str__(self):
         return self.machinery_name
     
 class Customer(models.Model):
     customer_name=models.CharField(max_length=50)
     customer_id =models.ForeignKey(User, on_delete=models.CASCADE, null=True) 
+    
+class Feedback(models.Model):
+    content=models.TextField(null=True)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     
