@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap');
+
 *{
-    font-family: 'Chakra Petch', sans-serif;
+    /* font-family: 'Chakra Petch', sans-serif; */
+    font-family: 'Gentium Plus', serif;
 }
 body{
     background-color: #133831;
@@ -60,7 +63,9 @@ strong{
 }
 #order-btn:hover{
     background-color: #000;
-    color: #fff;
+    /* color: #fff; */
+    color: #fdc730;
+    outline: 1px solid #fdc730;
 }
 .order-btn{
     padding-left: 3%;
