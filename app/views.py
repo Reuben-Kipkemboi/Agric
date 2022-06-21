@@ -74,6 +74,11 @@ def user_logout(request):
     return render (request, 'login.html')
 
 
+def profile(request):
+    return render (request, 'profile.html')
+
+
+
 def owners(request):
     return render (request, 'owner.html')
 
