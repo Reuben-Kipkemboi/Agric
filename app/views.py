@@ -9,8 +9,13 @@ from django.contrib.auth import authenticate, login,logout
 def home(request):
     return render (request, 'index.html')
 
-#Register function
-def register(request):
+
+#base-register
+def base_register(request):
+    return render (request, 'base_register.html')
+
+
+def public_register(request):
     if request.method =='POST':
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
@@ -28,6 +33,27 @@ def register(request):
         new_user.save()
         return redirect ('login') 
     return render (request, 'register.html')
+
+#Register function
+def owner_register(request):
+    if request.method =='POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        username = request.POST['username']
+        email = request.POST['email']
+        password1 = request.POST['password1']
+        password2= request.POST['password2']
+        
+        if password1 != password2:
+            messages.error(request,"Check your passwords to make sure they match")
+            return redirect('/register')
+        
+        new_user = User.objects.create_user(first_name=first_name,last_name=last_name,username=username,email=email,password=password1)
+        
+        new_user.save()
+        return redirect ('login') 
+    return render (request, 'register.html')
+
 
 
 #Login function
