@@ -26,6 +26,7 @@
       </button>
   
       <!-- Collapsible wrapper -->
+      {% if user.is_authenticated %}
       <div class="collapse navbar-collapse" id="navbarButtonsExample">
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -34,7 +35,7 @@
           </li>
         </ul>
         <!-- Left links -->
-  
+        {% else %}
         <div class="d-flex align-items-center">
             <a href="{% url 'login' %}" class="btn btn-primary px-3 me-2">Login</a>
           <a href="{% url 'signup' %}" class="btn btn-primary me-3">Sign up for free</a>
@@ -47,6 +48,7 @@
           </a>
           
         </div>
+        {% endif %}
       </div>
       <!-- Collapsible wrapper -->
     </div>
