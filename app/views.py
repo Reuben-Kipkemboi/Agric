@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import * 
 from django.contrib import messages
 from django.contrib.auth import authenticate, login,logout
+from .forms import ProfileUpdateForm
 
 # APPLICATION VIEWS.
 
@@ -75,8 +76,21 @@ def user_logout(request):
 
 
 def profile(request):
+    users= User.objects.all()
+    current_user = request.user
+    
     return render (request, 'profile.html')
 
+
+def update_profile(request):
+    if request.method == 'POST':
+        userprofileform = ProfileUpdateForm(request.POST,request.FILES,instance=request.user.profile)
+        if  userprofileform.is_valid():
+            userprofileform.save()
+            return redirect(to='profile')
+    else:
+        form=ProfileUpdateForm(instance =request.user.profile)
+    return render(request,'update_profile.html', {'form':form})
 
 
 def owners(request):
