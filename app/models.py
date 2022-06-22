@@ -1,16 +1,16 @@
 from importlib import machinery
 from django.db import models
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-from django.contrib.auth.models import AbstractUser
+# from django.contrib.auth.models import AbstractUser
 
-class User(AbstractUser):
-    is_owner = models.BooleanField(default=False)
-    is_public = models.BooleanField(default=False)
+# class User(AbstractUser):
+#     is_owner = models.BooleanField(default=False)
+#     is_public = models.BooleanField(default=False)
 
-class Owner(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+# class Owner(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
 
 
 

@@ -15,7 +15,7 @@ def home(request):
 
 #base-register
 def base_register(request):
-    return render (request, 'owners/base_register.html')
+    return render (request, 'logins/base_register.html')
 
 
 def public_register(request):
@@ -35,7 +35,7 @@ def public_register(request):
         
         new_user.save()
         return redirect ('login') 
-    return render (request, 'register.html')
+    return render (request, 'logins/register.html')
 
 #Register function
 def owner_register(request):
@@ -70,7 +70,7 @@ def user_login(request):
             login(request,user)
             messages.success(request,"Welcome ,you are now logged in")
             return redirect ("home")
-    return render (request, '/logins/login.html')
+    return render (request, 'logins/login.html')
 
 #logout function
 def user_logout(request):
