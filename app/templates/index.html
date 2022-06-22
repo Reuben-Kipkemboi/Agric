@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class="container-fluid">
   <div id="carouselExampleTouch" class="carousel slide" data-mdb-touch="false" data-interval="100">
@@ -147,7 +148,7 @@
           </a>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Tractor & planting machinery</h5>
+          <h5 class="card-title">Planting as a service</h5>
           <p class="card-text">
             Worry less about your planting season.Tech Tract brings the solutions back to you at ease.
           </p>
@@ -159,18 +160,17 @@
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card">
         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-          <img src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" class="img-fluid" />
+          <img src="{% static 'images/plough.png' %}" class="img-fluid" alt="pluoghing machinery" id="image2"/>
           <a href="#!">
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
           </a>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Ploughing as a service</h5>
           <p class="card-text">
-            Some quick example text to build on the card title and make
-            up the bulk of the card's content.
+            Remember the early bird catches the worm, order from our owners and have it done on time.
           </p>
-          <a href="#!" class="btn btn-primary">Button</a>
+          <a href="#!" class="btn btn-primary">View More</a>
         </div>
       </div>
     </div>
@@ -178,18 +178,17 @@
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card">
         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-          <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
+          <img src="{% static 'images/carriage.png' %}" class="img-fluid" id="image2"/>
           <a href="#!">
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
           </a>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Transport as a service</h5>
           <p class="card-text">
-            Some quick example text to build on the card title and make
-            up the bulk of the card's content.
+            Have a better option to ferry your heavy materials either farm products or far inputs. Hire with us.
           </p>
-          <a href="#!" class="btn btn-primary">Button</a>
+          <a href="#!" class="btn btn-primary">View More</a>
         </div>
       </div>
     </div>
