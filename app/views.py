@@ -113,6 +113,7 @@ def add_machinery(request):
         machinery_properties=request.POST.get('describe')
         machinery_name =request.POST.get('machine')
         current_location=request.POST.get('location')
+        availability=request.POST.get('available') 
         hire_price=request.POST.get('hire')
         ploughing_pay_rate=request.POST.get('ploughing')
         forklifting_pay_rate=request.POST.get('forklifting')
@@ -120,7 +121,7 @@ def add_machinery(request):
         operator_name=request.POST.get('operator_name') 
         
         
-        machinery=Machinery(image=image,machinery_properties=machinery_properties,machinery_name=machinery_name,current_location=current_location,hire_price=hire_price,ploughing_pay_rate=ploughing_pay_rate,
+        machinery=Machinery(image=image,machinery_properties=machinery_properties,machinery_name=machinery_name,current_location=current_location,availability=availability,hire_price=hire_price,ploughing_pay_rate=ploughing_pay_rate,
         forklifting_pay_rate=forklifting_pay_rate,transport_pay_rate=transport_pay_rate,operator_name=operator_name )
         
         machinery.owner_id= request.user                      

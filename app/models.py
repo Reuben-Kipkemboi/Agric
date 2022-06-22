@@ -70,6 +70,7 @@ class Machinery(models.Model):
     machinery_properties = models.TextField(null=True)
     machinery_name =models.CharField(max_length=50 , null=True)
     current_location = models.CharField(max_length=100, null=True)
+    availability= models.CharField(max_length=5)
     hire_price= models.IntegerField(default=0)
     ploughing_pay_rate= models.IntegerField(default=0)
     planting_pay_rate= models.IntegerField(default=0)
