@@ -109,23 +109,24 @@ def owners(request):
 def add_machinery(request):
     if request.method=='POST':
         image=request.FILES.get('image')
-        describe=request.POST.get('describe')
-        name =request.POST.get('name')
-        neighbourhood_location=request.POST.get('location')
-        occupants_count=request.POST.get('count')
-        health_contacts=request.POST.get('contact')
-        police_contacts=request.POST.get('police') 
+        machinery_properties=request.POST.get('describe')
+        machinery_name =request.POST.get('machine')
+        current_location=request.POST.get('location')
+        hire_price=request.POST.get('hire')
+        ploughing_pay_rate=request.POST.get('ploughing')
+        forklifting_pay_rate=request.POST.get('forklifting')
+        transport_pay_rate=request.POST.get('transport')  
+        operator_name=request.POST.get('operator_name') 
         
         
-        machinery=Machinery(image=image,describe=describe,name=name,neighbourhood_location=neighbourhood_location,health_contacts=health_contacts,police_contacts=police_contacts,
-        occupants_count=occupants_count )
+        machinery=Machinery(image=image,machinery_properties=machinery_properties,machinery_name=machinery_name,current_location=current_location,hire_price=hire_price,ploughing_pay_rate=ploughing_pay_rate,
+        forklifting_pay_rate=forklifting_pay_rate,transport_pay_rate=transport_pay_rate,operator_name=operator_name )
         
-        # neighbourhoods.admin_id= request.user                      
-        
+        machinery.owner_id= request.user                      
         
         machinery.save_machinery()
         
-        return redirect('owners')
+        return redirect('owner')
     
     return render (request, 'add.html')
 

@@ -8,12 +8,12 @@ Add NeighbourHood--
 <section class="vh-70">
     <div class="container-fluid py-2 h-100" id="post-page">
         <div class="row d-flex align-items-center justify-content-center h-100">
-            <div class="col-md-6 card p-4" id="hood-card">
-                <form method="POST" action="{% url 'neighbourhood'%}" enctype="multipart/form-data">
+            <div class="col-md-7 card p-4" id="hood-card">
+                <form method="POST" action="" enctype="multipart/form-data">
                     {% csrf_token %}
                     <!-- Image field -->
                     <div class="mb-3 col-md-12">
-                        <label class="form-label" for="customFile">Neighbour Hood Image</label>
+                        <label class="form-label" for="customFile">Machinery Image</label>
                         <input type="file" class="form-control" id="image" name="image" />
 
                     </div>
@@ -21,41 +21,53 @@ Add NeighbourHood--
                     <!-- Hood description -->
                     <div class="form-outline mb-4">
                         <textarea class="form-control" id="describe" rows="4" name="describe"></textarea>
-                        <label class="form-label" for="form6Example7">Description</label>
+                        <label class="form-label" for="form6Example7">Machinery Properties</label>
                     </div>
-                    
-                    <!-- Neighbour Hood input -->
-                    <div class="form-outline mb-4">
-                        <input type="text" id="business_name" class="form-control" name="name"/>
-                        <label class="form-label" for="name">Neighbourhood Name</label>
+                    <div class="row px-4">
+                        <div class="form-outline mb-4 col-md-5 me-2">
+                            <input type="text" id="machinery-name" class="form-control" name="machine" />
+                            <label class="form-label" for="name">Machinery Name
+                        </div>
+
+                        <div class="form-outline mb-4 col-md-5">
+                            <input type="text" id="machinery-name" class="form-control" name="location" />
+                            <label class="form-label" for="name">Current Location</label>
+                        </div>
                     </div>
 
-                    <!--  Location input -->
-                    <div class="form-outline mb-4">
-                        <input type="text" id="location" class="form-control" name="location"/>
-                        <label class="form-label" for="name">Neighbourhood Location</label>
-                    </div>
+                    <div class="row mb-4 px-4">
+                        <div class="form-outline mb-4 col-md-4 me-2">
+                            <input type="text" id="business_name" class="form-control" name="hire" />
+                            <label class="form-label" for="name">Hire Price Per Hour</label>
+                        </div>
 
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                        <input type="number" id="count" class="form-control" name="count" />
-                        <label class="form-label" for="title">Occupants Count</label>
+                        <!--  Location input -->
+                        <div class="form-outline mb-4 col-md-4  me-2">
+                            <input type="text" id="location" class="form-control" name="ploughing" />
+                            <label class="form-label" for="name">Ploughing Pay Rate</label>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4 col-md-3  me-2">
+                            <input type="number" id="count" class="form-control" name="forklifting" />
+                            <label class="form-label" for="title">ForkLifting Pay Rate</label>
+                        </div>
                     </div>
 
                     <!-- Health contacts Input -->
                     <div class="form-outline mb-4">
-                        <input type="text" id="contact" class="form-control" name="contact" />
-                        <label class="form-label" for="title">Health Helpline</label>
+                        <input type="text" id="contact" class="form-control" name="transport" />
+                        <label class="form-label" for="title">Transport Pay Rate</label>
                     </div>
 
                     <!-- Police helpline -->
                     <div class="form-outline mb-4">
-                        <input type="text" id="police" class="form-control" name="police" />
-                        <label class="form-label" for="title">Police Helpline</label>
+                        <input type="text" id="police" class="form-control" name="operator_name" />
+                        <label class="form-label" for="title">Operator_name</label>
                     </div>
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Create NeighbourHood</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Add Machinery</button>
                 </form>
             </div>
         </div>

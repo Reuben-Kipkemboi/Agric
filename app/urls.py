@@ -23,4 +23,6 @@ urlpatterns = [
     
     path('owner_home/', views.owners, name='owner'),
     
+    path('add_machinery/', views.add_machinery, name='add'),
+    
 ]
