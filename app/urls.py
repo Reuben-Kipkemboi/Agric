@@ -34,6 +34,8 @@ urlpatterns = [
     
     path('services/', views.services, name='services'),
     
+    path('user_machinery/<int:machinery_id>/', views.user_single_machine, name='single_machine'),
+    
     
     
 ]

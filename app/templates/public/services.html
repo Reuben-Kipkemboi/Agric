@@ -2,11 +2,11 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid">
-    <div class="row">
+    <div class="row mb-4 ">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for machine in machineries %}
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 mvb-3">
                     <img src="{{machine.image.url}}" class="card-img-top" alt="machinery" />
                     <div class="card-body">
                         <h5 class="card-title"></h5>
@@ -15,7 +15,12 @@
                             additional content. This content is a little bit longer.
                         </p>
                     </div>
+                    <div class="col-md-8">
+                        <a href="{% url 'single_machine' machine.id %}" class="btn btn-outline-success">Machinery Description</a>
+                    </div>
+                    
                 </div>
+                
             </div>
             {% endfor %}
         </div>
