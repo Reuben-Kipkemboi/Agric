@@ -97,10 +97,35 @@ def update_profile(request):
 
 
 
-def owners(request):
-    return render (request, 'owner.html')
+# def owners(request):
+#     return render (request, 'owner.html')
 
 #owners html
 def owners(request):
-    return render (request, 'owner_home.html')
+    machinery=Machinery.objects.all()
+    return render (request, 'owner_home.html',{'machinery':machinery})
+
+
+def add_machinery(request):
+    if request.method=='POST':
+        image=request.FILES.get('image')
+        describe=request.POST.get('describe')
+        name =request.POST.get('name')
+        neighbourhood_location=request.POST.get('location')
+        occupants_count=request.POST.get('count')
+        health_contacts=request.POST.get('contact')
+        police_contacts=request.POST.get('police') 
+        
+        
+        machinery=Machinery(image=image,describe=describe,name=name,neighbourhood_location=neighbourhood_location,health_contacts=health_contacts,police_contacts=police_contacts,
+        occupants_count=occupants_count )
+        
+        # neighbourhoods.admin_id= request.user                      
+        
+        
+        machinery.save_machinery()
+        
+        return redirect('owners')
+    
+    return render (request, 'add.html')
 
