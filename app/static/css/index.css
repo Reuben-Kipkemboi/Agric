@@ -6,8 +6,9 @@
     /* font-family: 'Chakra Petch', sans-serif; */
     font-family: 'Gentium Plus', serif;
 }
-body{
+.hero{
     background-color: #133831;
+    border-radius: 100% 0% 100% 0% / 66% 100% 0% 34%  ;
 }
 
 #register-btn{

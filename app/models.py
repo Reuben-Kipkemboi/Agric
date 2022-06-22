@@ -57,7 +57,12 @@ class Machinery(models.Model):
     machinery_name =models.CharField(max_length=50 , null=True)
     current_location = models.CharField(max_length=100, null=True)
     hire_price= models.IntegerField(default=0)
+    ploughing_pay_rate= models.IntegerField(default=0)
+    planting_pay_rate= models.IntegerField(default=0)
+    forklifting_pay_rate= models.IntegerField(default=0)
+    transport_pay_rate= models.IntegerField(default=0)
     operator_name = models.CharField(max_length=50 , null=True)
+    owner_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     
     
     def save_machinery(self):
@@ -104,6 +109,7 @@ class Order(models.Model):
     cell_no = models.CharField(max_length=15)
     address = models.TextField()
     date = models.DateTimeField()
+    service=models.CharField(max_length=40, null=True)
     machinery_id = models.ForeignKey(Machinery, on_delete=models.CASCADE, null=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     
