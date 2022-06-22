@@ -10,7 +10,9 @@ from django.contrib.auth.decorators import login_required
 # APPLICATION VIEWS.
 #home function
 def home(request):
-    return render(request, 'public/index.html')
+    machineries = Machinery.objects.all()
+    
+    return render(request, 'public/index.html', {'machineries':machineries})
 
 
 #base-register
@@ -164,6 +166,9 @@ def update_machinery(request, machinery_id):
         form2 = MachineryUpdateForm(instance=update )
     return render(request, 'owners/update_machinery.html', {'form2': form2})
 
+
+def comment(request):
+    return render(request, 'comment.html')
 
 
 
