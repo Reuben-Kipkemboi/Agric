@@ -25,4 +25,8 @@ urlpatterns = [
     
     path('add_machinery/', views.add_machinery, name='add'),
     
+    path('machinery/<int:machinery_id>/', views.single_machine, name='single'),
+    
+    path('delete/<int:machinery_id>', views.delete_machinery, name='delete'),
+    
 ]

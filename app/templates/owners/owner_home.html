@@ -19,8 +19,8 @@
           <div class="card-body">
             <h5 class="card-title fw-bold text-black">{{single.machinery_name|capfirst}}</h5>
             <p class="card-text">{{single.machinery_properties|capfirst}}.</p>
-            <a href="" class="btn btn-primary">Update</a>
-            <a href="" class="btn btn-primary">Remove</a>
+            <a href="{% url 'single' single.id %}" class="btn btn-primary">Details</a>
+            
           </div>
         </div>
       </div>
