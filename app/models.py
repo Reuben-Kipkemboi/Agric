@@ -1,9 +1,18 @@
 from importlib import machinery
 from django.db import models
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-# from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser
+
+class User(AbstractUser):
+    is_owner = models.BooleanField(default=False)
+    is_public = models.BooleanField(default=False)
+
+class Owner(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+
+
 
 
 #Application modules
@@ -29,7 +38,7 @@ from cloudinary.models import CloudinaryField
  
 class Profile(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE,related_name='profile')
-    fullname=models.CharField(max_length=100,blank=True,null=True)
+    # fullname=models.CharField(max_length=100,blank=True,null=True)
     username=models.CharField(max_length=100,blank=True,null=True)
     user_email=models.EmailField(max_length=100,blank=True,null=True)
     profile_pic=CloudinaryField('image')
@@ -49,6 +58,11 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.username)
+    
+    @classmethod
+    def filter_profile_by_id(cls, id):
+        profile = Profile.objects.filter(user__id = id).first()
+        return profile
  
     
 class Machinery(models.Model):
