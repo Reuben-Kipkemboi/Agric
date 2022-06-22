@@ -1,8 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from .models import * 
 from django.contrib import messages
 from django.contrib.auth import authenticate, login,logout
 from .forms import ProfileUpdateForm
+from django.contrib.auth.decorators import login_required
+
 
 # APPLICATION VIEWS.
 
@@ -78,8 +80,9 @@ def user_logout(request):
 def profile(request):
     users= User.objects.all()
     current_user = request.user
+    # profile = get_object_or_404(Profile,user=request.user)
     
-    return render (request, 'profile.html')
+    return render (request, 'profile.html', {"users":users})
 
 
 def update_profile(request):
@@ -93,6 +96,11 @@ def update_profile(request):
     return render(request,'update_profile.html', {'form':form})
 
 
+
 def owners(request):
     return render (request, 'owner.html')
+
+#owners html
+def owners(request):
+    return render (request, 'owner_home.html')
 
