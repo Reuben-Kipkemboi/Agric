@@ -7,9 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import *
 from django.contrib.auth.decorators import login_required
 
-
 # APPLICATION VIEWS.
-
 #home function
 def home(request):
     return render(request, 'public/index.html')
@@ -165,6 +163,9 @@ def update_machinery(request, machinery_id):
     else:
         form2 = MachineryUpdateForm(instance=update )
     return render(request, 'owners/update_machinery.html', {'form2': form2})
+
+
+
 
 
 

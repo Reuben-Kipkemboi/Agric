@@ -80,3 +80,21 @@ ul li{
     object-fit: cover;
     width: 100%;
 }
+#profile_pic{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    box-shadow: 4px 4px 4px 3px;
+}
+#bio{
+    font-size: 4vh;
+    color: #fdc730;
+}
+#locate{
+    font-size: 4vh;
+    color: #fdc730;
+
+}
+.hr{
+    border-bottom: 2px solid #133831;
+}
