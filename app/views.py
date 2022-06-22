@@ -4,7 +4,7 @@ from django.urls import reverse
 from .models import *
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from .forms import ProfileUpdateForm
+from .forms import *
 from django.contrib.auth.decorators import login_required
 
 
@@ -152,4 +152,19 @@ def delete_machinery(request, machinery_id):
   machinery = Machinery.objects.get(id=machinery_id)
   machinery.delete()
   return redirect('owner')
+
+
+def update_machinery(request, machinery_id):
+    update = Machinery.objects.get(id=machinery_id)
+    if request.method == 'POST':
+        machineryform = MachineryUpdateForm(
+            request.POST, request.FILES, instance=update)
+        if machineryform.is_valid():
+            machineryform.save()
+            return redirect('single', machinery_id)
+    else:
+        form2 = MachineryUpdateForm(instance=update )
+    return render(request, 'owners/update_machinery.html', {'form2': form2})
+
+
 

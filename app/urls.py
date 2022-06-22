@@ -27,6 +27,9 @@ urlpatterns = [
     
     path('machinery/<int:machinery_id>/', views.single_machine, name='single'),
     
+    path('update/<int:machinery_id>/details', views.update_machinery, name='update'),
+    
+    
     path('delete/<int:machinery_id>', views.delete_machinery, name='delete'),
     
 ]
