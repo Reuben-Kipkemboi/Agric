@@ -169,8 +169,19 @@ def update_machinery(request, machinery_id):
     return render(request, 'owners/update_machinery.html', {'form2': form2})
 
 
+def user_single_machine(request, machinery_id ):
+    single_machine=  Machinery.objects.get(id=machinery_id)
+    current_user = request.user
+    user = User.objects.get(username=current_user.username)
+    
+    return render(request, 'public/single_machine.html', {'single_machine':single_machine})
+
+
 def comment(request):
     return render(request, 'comment.html')
+
+
+
 
 
 

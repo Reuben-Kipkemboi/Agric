@@ -65,8 +65,8 @@
 
     </div>
     <p class="order-btn">
-      <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-ripple-color="dark"
-        id="order-btn">Find Out</button>
+      <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-ripple-color="dark" id="order-btn">Find
+        Out</button>
     </p>
 
     <div class="row">
@@ -160,7 +160,7 @@
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card">
         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-          <img src="{% static 'images/plough.png' %}" class="img-fluid" alt="pluoghing machinery" id="image2"/>
+          <img src="{% static 'images/plough.png' %}" class="img-fluid" alt="pluoghing machinery" id="image2" />
           <a href="#!">
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
           </a>
@@ -178,7 +178,7 @@
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card">
         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-          <img src="{% static 'images/carriage.png' %}" class="img-fluid" id="image2"/>
+          <img src="{% static 'images/carriage.png' %}" class="img-fluid" id="image2" />
           <a href="#!">
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
           </a>
@@ -195,6 +195,34 @@
   </div>
   </section>
   <!--Section: Content-->
+  <div class="row" id="subscribe-form">
+    <div class="col-md-6 mx-auto">
+      <section class="subscribe">
+        <form class="feedback-form" action="" method="POST">
+          <!-- Name input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="form4Example1" class="form-control" />
+            <label class="form-label" for="form4Example1">Name</label>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="email" class="form-control" name="email" />
+            <label class="form-label" for="form4Example2">Email address</label>
+          </div>
+
+          <!-- Message input -->
+          <div class="form-outline mb-4">
+            <textarea class="form-control" id="form4Example3" rows="4" name="feedback"></textarea>
+            <label class="form-label" for="form4Example3">Message</label>
+          </div>
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block mb-4 fs-5">Send <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+
+      </section>
+    </div>
+  </div>
 </div>
 
 {% endblock content %}
