@@ -10,9 +10,11 @@ from django.contrib.auth.decorators import login_required
 # APPLICATION VIEWS.
 #home function
 def home(request):
+    return render(request, 'public/index.html')
+
+def services(request):
     machineries = Machinery.objects.all()
-    
-    return render(request, 'public/index.html', {'machineries':machineries})
+    return render(request, 'public/services.html', {'machineries':machineries})
 
 
 #base-register
