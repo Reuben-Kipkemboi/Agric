@@ -10,12 +10,12 @@ from django.contrib.auth.decorators import login_required
 
 #home function
 def home(request):
-    return render (request, 'index.html')
+    return render (request, 'public/index.html')
 
 
 #base-register
 def base_register(request):
-    return render (request, 'base_register.html')
+    return render (request, 'owners/base_register.html')
 
 
 def public_register(request):
@@ -55,7 +55,7 @@ def owner_register(request):
         
         new_user.save()
         return redirect ('login') 
-    return render (request, 'register.html')
+    return render (request, 'logins/register.html')
 
 
 
@@ -70,11 +70,12 @@ def user_login(request):
             login(request,user)
             messages.success(request,"Welcome ,you are now logged in")
             return redirect ("home")
-    return render (request, 'login.html')
+    return render (request, '/logins/login.html')
 
 #logout function
 def user_logout(request):
-    return render (request, 'login.html')
+    logout(request)
+    return render (request, 'public/index.html')
 
 
 def profile(request):
@@ -82,7 +83,7 @@ def profile(request):
     current_user = request.user
     # profile = get_object_or_404(Profile,user=request.user)
     
-    return render (request, 'profile.html', {"users":users})
+    return render (request, 'profile/profile.html', {"users":users})
 
 
 def update_profile(request):
@@ -93,7 +94,7 @@ def update_profile(request):
             return redirect(to='profile')
     else:
         form=ProfileUpdateForm(instance =request.user.profile)
-    return render(request,'update_profile.html', {'form':form})
+    return render(request,'profile/update_profile.html', {'form':form})
 
 
 
@@ -103,7 +104,7 @@ def update_profile(request):
 #owners html
 def owners(request):
     machinery=Machinery.objects.all()
-    return render (request, 'owner_home.html',{'machinery':machinery})
+    return render (request, 'owners/owner_home.html',{'machinery':machinery})
 
 
 def add_machinery(request):
@@ -128,5 +129,5 @@ def add_machinery(request):
         
         return redirect('owner')
     
-    return render (request, 'add.html')
+    return render (request, 'owners/add.html')
 
