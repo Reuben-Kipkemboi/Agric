@@ -59,8 +59,9 @@ def public_register(request):
             return redirect('login')
         else:
             msg = 'form is not valid'
+    else:
         form = SignUpForm()
-    return render(request,'logins/register.html', {'form': form, 'msg': msg, 'user':user})
+    return render(request,'logins/register.html', {'form': form, 'msg': msg})
 
 def admin(request):
     return render(request, 'logins/admin.html')

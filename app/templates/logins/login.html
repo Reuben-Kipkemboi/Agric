@@ -17,14 +17,14 @@
             {% endfor %}
             {% endif %}
         </div>
-        <div class="card login-card px-5 pt-2">
+        <div class="card login-card px-5 pt-2 mt-5">
             <p class="text-center">
                 <img src="{% static 'images/trac.png'%}" alt="logo" id="logo-login">
             </p>
             <h4 id="login-slogan">OKOA TIME OKOA FARM</h4>
-            <p class="text-center">LOGIN</p>
+            <p class="text-center" id="par">LOGIN</p>
 
-            <form method="POST">
+            <form method="POST" class="col-md-10 mx-auto">
                 {% csrf_token %}
                 <div class="form-group first">
                     <label for="username">Username</label>
@@ -34,11 +34,12 @@
                     <label for="username">Password</label>
                     {{ form.password }}
                 </div>
-                <input type="submit" value="LOG IN TO OKOA FARM " class="btn btn-pill text-white btn-block btn-primary">
+                
+                <input type="submit" value="LOG IN TO OKOA FARM " class="btn btn-pill text-white btn-block" id="login-buuton">
             </form>
 
             <!-- Register buttons -->
-            <div class="text-center">
+            <div class="text-center p-2">
                 <p>Not a member? <a href="{% url 'register' %}">Register</a></p>
                 <p>or sign up with:</p>
                 <button type="button" class="btn btn-primary btn-floating mx-1">

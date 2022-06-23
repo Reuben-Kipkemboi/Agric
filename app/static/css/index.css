@@ -162,3 +162,13 @@ ul li{
     height: 15vh;
     padding: 3%;
 }
+#par{
+    color: #133831;
+    font-weight: bold;
+    font-size: 4vh;
+}
+#login-buuton{
+    background-color: #133831;
+    font-weight: bold;
+
+}

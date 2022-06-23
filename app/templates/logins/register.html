@@ -1,13 +1,19 @@
 {% extends 'public/base.html' %}
 {% load static %}
 {% block content %}
-<div class="container-fluid d-flex justify-content-center align-items-center" id="register-page">
-  <section class="mb-5">
+<div class="container-fluid justify-content-center align-items-center" id="register-page">
 
-    <div class="col-md-12 card p-5 ">
-      <h4 class="mb-3 text-center">
+  <div class="col-md-6 mx-auto">
+    <div class="card p-4">
+      <!-- <div class=" card "> -->
+      <p class="text-center">
+        <img src="{% static 'images/trac.png'%}" alt="logo" id="logo-login">
+      </p>
+      <h4 class="mb-4 text-center">
         <strong>OKOA TIME OKOA FARM</strong>
       </h4>
+      <p class="text-center" id="par">REGISTER</p>
+
 
       <div>
         {% if messages %}
@@ -60,78 +66,12 @@
         <span class="text-error">{{ form.errors }}</span>
         <input type="submit" value="Register" class="btn btn-pill text-white btn-block btn-primary">
       </form>
+    </div>
+  </div>
 
 
 
 
-  </section>
 </div>
 
 {% endblock content %}
-
-
-
-
-
-
-<!-- <form action="{% url 'register' %}" method="POST">
-
-  {% csrf_token %}
-
-  <div class="row mb-4">
-    <div class="col">
-      <div class="form-outline">
-        <input type="text" id="first_name" name="first_name" class="form-control" />
-        <label class="form-label" for="form3Example1">First name</label>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="form-outline">
-        <input type="text" id="last_name" name="last_name" class="form-control" />
-        <label class="form-label" for="form3Example2">Last name</label>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="form-outline">
-        <input type="text" id="username" name="username" class="form-control" />
-        <label class="form-label" for="form3Example2">Username</label>
-      </div>
-    </div>
-  </div>
-
- 
-  <div class="form-outline mb-4">
-    <input type="email" id="email" name="email" class="form-control" />
-    <label class="form-label" for="form3Example3">Email address</label>
-  </div>
-
-  <div class="row mb-4 passwords">
- 
-    <div class="col">
-      <div class="form-outline">
-        <input type="password" id="password" name="password1" class="form-control" />
-        <label class="form-label" for="form3Example4">Password</label>
-      </div>
-    </div>
-
-   
-    <div class="col">
-      <div class="form-outline">
-        <input type="password" id="password2" name="password2" class="form-control" />
-        <label class="form-label" for="form3Example4">Verify password</label>
-      </div>
-    </div>
-
-  </div>
-
-
-  <p class="text-center">
-   
-    <button type="submit" class="btn btn-info mb-4" id="register-btn">
-      REGISTER WITH OKOA FARM
-    </button>
-  </p>
-
-</form> -->
