@@ -122,8 +122,8 @@ class Owner_post(models.Model):
 class Order(models.Model):
     customer_name = models.CharField(max_length=100)
     cell_no = models.CharField(max_length=15)
-    address = models.TextField()
-    date = models.DateTimeField()
+    address = models.CharField(max_length=40)
+    date = models.DateTimeField(auto_now_add=True)
     service=models.CharField(max_length=40, null=True)
     machinery_id = models.ForeignKey(Machinery, on_delete=models.CASCADE, null=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
@@ -150,6 +150,7 @@ class Feedback(models.Model):
     user_name = models.CharField(max_length=50, null=True)
     email = models.EmailField(max_length=70, null=True, blank=True)
     content=models.TextField(null=True)
+    rating = models.IntegerField(default=0)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     machinery_id =models.ForeignKey(Machinery, on_delete=models.CASCADE, null=True)
     

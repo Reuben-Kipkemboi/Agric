@@ -204,3 +204,28 @@ def comment(request, machinery_id):
             form2 = CommentForm()
 
     return render(request, 'public/comment.html', {'form2': form2, 'machine': machine})
+
+
+#order form
+def order(request, machinery_id):
+    current_user = request.user
+    user = User.objects.get(username=current_user.username)
+    machine = Machinery.objects.get(id=machinery_id)
+    form3 = OrderForm()
+    
+    if request.method == 'POST':
+        form3 = OrderForm(request.POST)
+        if form3.is_valid():
+
+            order = form3.save(commit=False)
+
+            order.user_id = user
+            order.machinery_id = machine
+
+            order.save()
+
+            return redirect('single_machine',machinery_id)
+        else:
+            form3 = OrderForm()
+
+    return render(request, 'public/order.html', {'form3': form3, 'machine': machine})

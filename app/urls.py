@@ -38,6 +38,8 @@ urlpatterns = [
     
     path('comment/<int:machinery_id>', views.comment, name='comment'),
     
+    path('hire/<int:machinery_id>', views.order, name='order'),
+    
     
     
 ]

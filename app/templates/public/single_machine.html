@@ -46,30 +46,30 @@
 
 
                     <!-- forklifting_pay_rate -->
-                    <a class="btn btn-outline-secondary btn-sm col-md-4 me-3  mb-3" id="c">
+                    <a class="btn btn-outline-warning btn-sm col-md-4 me-3  mb-3" id="c">
                         <h5>{{single_machine.forklifting_pay_rate }}</h5>
                         <span class="sc">Forklifting Price</span>
                     </a>
 
                     <!-- forklifting_pay_rate -->
-                    <a class="btn btn-outline-secondary btn-sm col-md-4 me-3  mb-3" id="c">
+                    <a class="btn btn-outline-dark btn-sm col-md-4 me-3  mb-3" id="c">
                         <h5>{{single_machine.transport_pay_rate }}</h5>
                         <span class="sc">Transportation Price</span>
                     </a>
                     <!-- operator_name -->
-                    <a class="btn btn-outline-secondary btn-sm col-md-4 me-3 mb-3" id="c">
+                    <a class="btn btn-outline-info btn-sm col-md-4 me-3 mb-3" id="c">
                         <h5>{{single_machine.operator_name }}</h5>
-                        <span class="sc">Transportation Price</span>
+                        <span class="sc">Operator Name</span>
                     </a>
 
                 </div>
                 <hr>
                 <div class="row ps-5">
-                    <div class="col-md-4">
-                        <a href="{% url 'comment' single_machine.id %}" class="btn btn-primary">Comment</a>
+                    <div class="col-md-6">
+                        <a href="{% url 'comment' single_machine.id %}" class="btn btn-primary">Comment & Rate</a>
                     </div>
                     <div class="col-md-4">
-                        <a href="" class="btn btn-danger">Rate</a>
+                        <a href="{% url 'order' single_machine.id %}" class="btn btn-success">Book / Hire</a>
                     </div>
                 </div>
 
