@@ -12,7 +12,8 @@ from django.contrib.auth.decorators import login_required
 
 
 def home(request):
-    return render(request, 'public/index.html')
+    comments= Feedback.objects.all()
+    return render(request, 'public/index.html', {'comments':comments})
 
 
 def services(request):

@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid">
-  <div id="carouselExampleTouch" class="carousel slide" data-mdb-touch="false" data-interval="100">
+  <div id="carouselExampleTouch" class="carousel slide" data-mdb-touch="false">
     <div class="carousel-indicators">
       <button type="button" data-mdb-target="#carouselExampleTouch" data-mdb-slide-to="0" class="active"
         aria-current="true" aria-label="Slide 1"></button>
@@ -10,16 +10,16 @@
       <button type="button" data-mdb-target="#carouselExampleTouch" data-mdb-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active">
+      <div class="carousel-item active" data-mdb-interval="2000">
         <img
           src="https://images.unsplash.com/photo-1605250715107-4328d0464f79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
           class="d-block w-100 img" alt="Farm Machiney" />
         <div class="carousel-caption d-none d-md-block">
-          <h5>OKOA TIME OKOA FARM</h5>
-          <p>Avoid the hustle and late ploughing, Okoa Farm.</p>
+          <h5 class="black">OKOA TIME OKOA FARM</h5>
+          <p class="black">Avoid the hustle and late ploughing, Okoa Farm.</p>
         </div>
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" data-mdb-interval="5000">
         <img
           src="https://images.unsplash.com/photo-1634433545797-c18dd170e75e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1033&q=80"
           class="d-block img" alt="Machinery harvesting" />
@@ -28,13 +28,13 @@
           <p>Save time profitably; Spend time productively!”.</p>
         </div>
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" data-mdb-interval="5000">
         <img
           src="https://images.pexels.com/photos/2257455/pexels-photo-2257455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           class="d-block img" alt="machinery harvesting" />
         <div class="carousel-caption d-none d-md-block">
-          <h5>OKOA TIME OKOA FARM</h5>
-          <p>
+          <h5 class="green">OKOA TIME OKOA FARM</h5>
+          <p class="green">
             The early bird catches the worm.</p>
         </div>
       </div>
@@ -54,9 +54,10 @@
     <h3 class="okoa">Why OKOA FARM</h3>
     <div class="row">
       <div class="col-md-7 pb-5 slogan">
-        We seek to create opportunities for everyone to be a part of our farming growth by availing the necessary
+        We seek to create opportunities for everyone to be a p<span id="yellow">art
+          of our farming growth by availing</span> the necessary
         required
-        machinery and farm equipments to you.
+        machinery and farm <span id="yellow">equipments to you.</span>
       </div>
       <div class="col-md-4"></div>
 
@@ -71,35 +72,35 @@
 
     <div class="row">
       <div class="row">
-        <h4 class="text-center">Services</h4>
+        <h4 class="text-center text-warning fs-2"> Featured Services</h4>
 
       </div>
       <div class="row">
-        <p class="text-center">What people offer</p>
+        <p class="text-center text-white">What our owners offer</p>
       </div>
       <div class="row p-4">
-        <div class="col-md-4 text-center mb-4">
+        <div class="col-md-4 text-center mb-5">
           <p>
-            <i class="fa-solid fa-tractor text-danger fa-4x"></i>
+            <i class="fa-solid fa-tractor fa-4x text-warning"></i>
           </p>
-          <p>Ploughing</p>
+          <p class="fs-4 text-white">Ploughing</p>
 
 
         </div>
 
         <div class="col-md-4 text-center  mb-4">
           <p>
-            <i class="fa-solid fa-forklift fa-3x"></i>
+            <i class="fa-solid fa-truck-monster fa-3x text-warning"></i>
           </p>
-          <p>Fork Lifting</p>
+          <p class="fs-4 text-white">Fork Lifting</p>
 
 
         </div>
         <div class="col-md-4 text-center  mb-4">
           <p>
-            <i class="fa-solid fa-truck-pickup fa-3x"></i>
+            <i class="fa-solid fa-truck-pickup fa-3x text-white"></i>
           </p>
-          <p>Transport</p>
+          <p class="fs-4 text-warning">Transport</p>
 
 
         </div>
@@ -108,7 +109,7 @@
           <p>
             <i class="fa-solid fa-seedling text-success fa-3x"></i>
           </p>
-          <p>Planting services</p>
+          <p class="fs-4 text-white">Planting services</p>
 
 
         </div>
@@ -117,16 +118,16 @@
           <p>
             <i class="fa-solid fa-certificate fa-3x text-warning"></i>
           </p>
-          <p>Quality Services</p>
+          <p class="fs-4 text-white">Quality Services</p>
 
 
         </div>
 
         <div class="col-md-4 text-center  mb-4">
           <p>
-            <i class="fa-solid fa-money-bill-1-wave fa-3x"></i>
+            <i class="fa-solid fa-money-bill-1-wave fa-3x text-white"></i>
           </p>
-          <p>Low Pay-Rate</p>
+          <p class="fs-4 text-warning">Low service Pay-Rate</p>
 
 
         </div>
@@ -193,7 +194,27 @@
       </div>
     </div>
   </div>
-  </section>
+  
+  <div class="row mb-4 ">
+    <h3 id="clients">WHAT OUR CUSTOMERS SAY</h3>
+    {% for comment in comments %}
+    <div class="col-md-3 mx-auto" >
+      <div class="card p-4"id="comment-card" >
+        <p class="card-title text-white">{{comment.user_name}}</p>
+        <p class="text-warning">"{{comment.content}}"</p>
+        <a class="btn btn-outline-warning btn-sm mb-3" id="c">
+          <h3>{{comment.rating }}</h3>
+          <span class="sc">My service Rate</span>
+      </a>
+
+      </div>
+
+    </div>
+    {% endfor %}
+   
+  </div>
+
+
   <!--Section: Content-->
   <div class="row" id="subscribe-form">
     <div class="col-md-6 mx-auto">
@@ -217,7 +238,8 @@
             <label class="form-label" for="form4Example3">Message</label>
           </div>
           <!-- Submit button -->
-          <button type="submit" class="btn btn-primary btn-block mb-4 fs-5">Send <i class="fa-solid fa-paper-plane"></i></button>
+          <button type="submit" class="btn btn-primary btn-block mb-4 fs-5">Send <i
+              class="fa-solid fa-paper-plane"></i></button>
         </form>
 
       </section>
