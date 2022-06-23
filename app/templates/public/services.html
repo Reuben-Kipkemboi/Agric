@@ -1,7 +1,7 @@
 {% extends 'public/base.html' %}
 {% load static %}
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid" id="services-page">
     <div class="row mb-4 ">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for machine in machineries %}
@@ -11,11 +11,10 @@
                     <div class="card-body">
                         <h5 class="card-title"></h5>
                         <p class="card-text">
-                            This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                            {{machine.machinery_properties}}.
                         </p>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 mb-3">
                         <a href="{% url 'single_machine' machine.id %}" class="btn btn-outline-success">Machinery Description</a>
                     </div>
                     

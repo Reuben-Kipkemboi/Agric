@@ -1,16 +1,16 @@
-{% extends 'public/base.html' %}
+{% extends 'owners/base2.html' %}
 {% load static %}
 {% block content %}
 <div class="container-fluid">
   <div class="row mb-4">
     <div class="col-md-3 mx-auto">
       <div class="card">
-        <a href="{% url 'add' %}" class="btn btn-secondary">Add Machinery</a>
+        <a href="{% url 'add' %}" class="btn btn-outline success">Welcome</a>
       </div>
     </div>
   </div>
   <div class="col-md-12">
-
+    <P class="text-center p-3 fs-4">Featured machinery</P>
     <div class="row" id="owner-page">
       {% for single in machinery %}
       <div class="col-sm-5 mx-auto">

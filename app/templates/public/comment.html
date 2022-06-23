@@ -3,16 +3,18 @@
 {% load bootstrap4 %}
 {% block content %}
 
-<div class="container mt-5 mb-3">
-    <h1>Comment</h1>
-
-    <div class="form_container">
-        <form action="" method="POST">
-            {% csrf_token %}
-            <div class="col-6 offset 3 mb-3">{% bootstrap_form form2 %}</div>
-
-            <button type="submit" class="btn btn-primary">Comment & Rate</button>
-        </form>
+<div class="container mt-5 mb-3 mx-auto" id="contain-order">
+    <h2 class="text-center p-4" id="order-title"> Rate services, Feedback, comments, experiences</h2>
+    <div class="col-md-9 mx-auto" id="form-order">
+        <div class="form_container shadow text-black">
+            <form action="" method="POST" class="pb-3">
+                {% csrf_token %}
+                <div class="col-md-10 p-4 mx-auto">{% bootstrap_form form2 %}</div>
+                <p class="text-center">
+                    <button type="submit" class="btn btn-warning btn-lg">Comment & Rate</button>
+                </p>
+            </form>
+        </div>
     </div>
 </div>
 
