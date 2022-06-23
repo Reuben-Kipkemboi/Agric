@@ -36,7 +36,8 @@ class LoginForm(forms.Form):
     password = forms.CharField(
         widget=forms.PasswordInput(
             attrs={
-                "class": "form-control"
+                "class": "form-control",'data-toggle': 'password',
+                 'id': 'password',
             }
         )
     )
@@ -53,14 +54,17 @@ class SignUpForm(UserCreationForm):
     password1 = forms.CharField(
         widget=forms.PasswordInput(
             attrs={
-                "class": "form-control"
+                "class": "form-control",'data-toggle': 'password',
+                 'id': 'password',
             }
         )
     )
     password2 = forms.CharField(
         widget=forms.PasswordInput(
             attrs={
-                "class": "form-control"
+                "class": "form-control",'data-toggle': 'password',
+                 'id': 'password',
+                
             }
         )
     )

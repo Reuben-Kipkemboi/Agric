@@ -55,13 +55,12 @@ def public_register(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             user = form.save()
-            msg = 'user created successfully'
+            msg = 'user created'
             return redirect('login')
         else:
             msg = 'form is not valid'
-    else:
         form = SignUpForm()
-    return render(request,'logins/register.html', {'form': form, 'msg': msg})
+    return render(request,'logins/register.html', {'form': form, 'msg': msg, 'user':user})
 
 def admin(request):
     return render(request, 'logins/admin.html')
@@ -130,13 +129,6 @@ def user_login(request):
 def admin(request):
     return render(request,'admin.html')
 
-#public
-def customer(request):
-    return render(request,'customer.html')
-
-#owner
-def employee(request):
-    return render(request,'employee.html')
 
 # logout function
 
@@ -155,6 +147,7 @@ def profile(request):
 
 
 def update_profile(request):
+    # profiles= Profile.objects.get(user=request.user)
     if request.method == 'POST':
         userprofileform = ProfileUpdateForm(
             request.POST, request.FILES, instance=request.user.profile)
@@ -205,8 +198,9 @@ def single_machine(request, machinery_id):
     single_machines = Machinery.objects.get(id=machinery_id)
     current_user = request.user
     user = User.objects.get(username=current_user.username)
+    orders = Order.get_orders(machinery_id)
 
-    return render(request, 'owners/single_machinery.html', {'single_machines': single_machines})
+    return render(request, 'owners/single_machinery.html', {'single_machines': single_machines,'orders':orders})
 
 
 def delete_machinery(request, machinery_id):

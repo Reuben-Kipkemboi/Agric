@@ -1,7 +1,9 @@
-from importlib import machinery
 from django.db import models
 # from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.db.models.signals import post_save
+# from django.db import transaction
+from django.dispatch import receiver
 
 from django.contrib.auth.models import AbstractUser
 
@@ -10,33 +12,7 @@ class User(AbstractUser):
     is_owner = models.BooleanField('Is owner', default=False)
     is_public = models.BooleanField('Is public', default=False)
 
-# class Owner(models.Model):
-#     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-
-
-
-
-#Application modules
-# class User(AbstractUser):
-#     is_public = models.BooleanField(default=False)
-#     is_owner = models.BooleanField(default=False)
-
-
-# class Owner(models.Model):
-#     user = models.OneToOneField(User, on_delete = models.CASCADE, primary_key = True)
-#     phone_number = models.CharField(max_length=20)
-#     location = models.CharField(max_length=20)
-
-# class Public(models.Model):
-#     user = models.OneToOneField(User, on_delete = models.CASCADE, primary_key = True)
-#     phone_number = models.CharField(max_length=20)
-#     designation = models.CharField(max_length=20)
-    
-    # def __str__(self):
-    #     return self.first_name    
-    
-    
- 
+     
 class Profile(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE,related_name='profile')
     # fullname=models.CharField(max_length=100,blank=True,null=True)
@@ -59,6 +35,19 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.username)
+    
+    @receiver(post_save, sender=User)
+    def create_user_profile(sender, instance, created, **kwargs):
+        if created:
+            Profile.objects.create(user=instance)
+            instance.profile.save()
+
+        post_save.connect(Profile, sender=instance)
+
+    @receiver(post_save, sender=User)
+    def save_user_profile(sender, instance, **kwargs):
+        Profile.objects.get_or_create(user=instance)
+        instance.profile.save()
     
     @classmethod
     def filter_profile_by_id(cls, id):
@@ -138,6 +127,11 @@ class Order(models.Model):
     def update_order(self,id,order):
         updated_order=Order.objects.filter(id=id).update(order)
         return updated_order
+    
+    @classmethod
+    def get_orders(cls,id):
+        orders = Order.objects.filter(machinery_id__pk = id)
+        return orders
 
 
     def __str__(self):
