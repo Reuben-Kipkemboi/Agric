@@ -1,1 +1,1 @@
-web: gunicorn agric.wsgi
+web: gunicorn Agric.wsgi
