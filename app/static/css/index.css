@@ -154,3 +154,11 @@ ul li{
 /* #form-order{
     background-color: #fff;
 } */
+.headings{
+    color: #133831;
+    font-weight: bold;
+}
+#button-card{
+    height: 15vh;
+    padding: 3%;
+}
