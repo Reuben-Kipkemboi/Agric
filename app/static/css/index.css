@@ -35,12 +35,14 @@ strong{
     height: 100px;
 }
 #logo{
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
+    border: 1px solid #fdc730;
+    
 
 }
 #nav{
-    background-color: #e3f2fd;
+    background-color: #133831;
 }
 .img{
     width: 100%;
@@ -127,4 +129,12 @@ ul li{
     border-right: 2px solid #133831;
     color: #133831;
 
+}
+.link-link{
+    color: #fdc730;
+    font-size: 3vh;
+    font-weight: 700;
+}
+.link-link:hover{
+    color: #fff;
 }
