@@ -11,3 +11,10 @@ class MachineryUpdateForm(forms.ModelForm):
     class Meta:
         model = Machinery
         exclude = ['owner_id']
+  
+        
+#cooments form
+class CommentForm(forms.ModelForm):
+     class Meta:
+        model = Feedback
+        fields=['user_name','email', 'content']

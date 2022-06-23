@@ -148,7 +148,7 @@ class Customer(models.Model):
     
 class Feedback(models.Model):
     user_name = models.CharField(max_length=50, null=True)
-    email = models.CharField(max_length=70, null=True, blank=True)
+    email = models.EmailField(max_length=70, null=True, blank=True)
     content=models.TextField(null=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     machinery_id =models.ForeignKey(Machinery, on_delete=models.CASCADE, null=True)

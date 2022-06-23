@@ -8,16 +8,19 @@ from .forms import *
 from django.contrib.auth.decorators import login_required
 
 # APPLICATION VIEWS.
-#home function
+# home function
+
+
 def home(request):
     return render(request, 'public/index.html')
 
+
 def services(request):
     machineries = Machinery.objects.all()
-    return render(request, 'public/services.html', {'machineries':machineries})
+    return render(request, 'public/services.html', {'machineries': machineries})
 
 
-#base-register
+# base-register
 def base_register(request):
     return render(request, 'logins/base_register.html')
 
@@ -43,7 +46,7 @@ def public_register(request):
         return redirect('login')
     return render(request, 'logins/register.html')
 
-#Register function
+# Register function
 
 
 def owner_register(request):
@@ -68,7 +71,7 @@ def owner_register(request):
     return render(request, 'logins/register.html')
 
 
-#Login function
+# Login function
 def user_login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -81,7 +84,7 @@ def user_login(request):
             return redirect("home")
     return render(request, 'logins/login.html')
 
-#logout function
+# logout function
 
 
 def user_logout(request):
@@ -112,8 +115,8 @@ def update_profile(request):
 # def owners(request):
 #     return render (request, 'owner.html')
 
-#owners html
-def owners(request ):
+# owners html
+def owners(request):
     machinery = Machinery.objects.all()
     return render(request, 'owners/owner_home.html', {'machinery': machinery})
 
@@ -143,17 +146,19 @@ def add_machinery(request):
 
     return render(request, 'owners/add.html')
 
-def single_machine(request, machinery_id ):
-    single_machines=  Machinery.objects.get(id=machinery_id)
+
+def single_machine(request, machinery_id):
+    single_machines = Machinery.objects.get(id=machinery_id)
     current_user = request.user
     user = User.objects.get(username=current_user.username)
-    
-    return render(request, 'owners/single_machinery.html', {'single_machines':single_machines})
+
+    return render(request, 'owners/single_machinery.html', {'single_machines': single_machines})
+
 
 def delete_machinery(request, machinery_id):
-  machinery = Machinery.objects.get(id=machinery_id)
-  machinery.delete()
-  return redirect('owner')
+    machinery = Machinery.objects.get(id=machinery_id)
+    machinery.delete()
+    return redirect('owner')
 
 
 def update_machinery(request, machinery_id):
@@ -165,25 +170,37 @@ def update_machinery(request, machinery_id):
             machineryform.save()
             return redirect('single', machinery_id)
     else:
-        form2 = MachineryUpdateForm(instance=update )
+        form2 = MachineryUpdateForm(instance=update)
     return render(request, 'owners/update_machinery.html', {'form2': form2})
 
 
-def user_single_machine(request, machinery_id ):
-    single_machine=  Machinery.objects.get(id=machinery_id)
+def user_single_machine(request, machinery_id):
+    single_machine = Machinery.objects.get(id=machinery_id)
     current_user = request.user
     user = User.objects.get(username=current_user.username)
+
+    return render(request, 'public/single_machine.html', {'single_machine': single_machine})
+
+
+def comment(request, machinery_id):
+    current_user = request.user
+    user = User.objects.get(username=current_user.username)
+    machine = Machinery.objects.get(id=machinery_id)
+    form2 = CommentForm()
     
-    return render(request, 'public/single_machine.html', {'single_machine':single_machine})
+    if request.method == 'POST':
+        form2 = CommentForm(request.POST)
+        if form2.is_valid():
 
+            comment = form2.save(commit=False)
 
-def comment(request):
-    return render(request, 'comment.html')
+            comment.user_id = user
+            comment.machinery_id = machine
 
+            comment.save()
 
+            return redirect('single_machine',machinery_id)
+        else:
+            form2 = CommentForm()
 
-
-
-
-
-
+    return render(request, 'public/comment.html', {'form2': form2, 'machine': machine})

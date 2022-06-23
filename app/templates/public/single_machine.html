@@ -66,17 +66,21 @@
                 <hr>
                 <div class="row ps-5">
                     <div class="col-md-4">
-                        <a href="" class="btn btn-primary">Comment</a>
+                        <a href="{% url 'comment' single_machine.id %}" class="btn btn-primary">Comment</a>
                     </div>
                     <div class="col-md-4">
                         <a href="" class="btn btn-danger">Rate</a>
                     </div>
                 </div>
 
+
+
+
+
             </div>
 
-
         </div>
-    </div>
 
-    {% endblock content %}
+    </div>
+</div>
+{% endblock content %}
