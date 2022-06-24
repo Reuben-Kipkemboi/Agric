@@ -45,32 +45,31 @@
           <label for="password">confirm Password</label>
           {{ form.password2 }}
         </div>
-        <div class="d-flex mb-5 align-items-center">
-          <label class="control control--checkbox mb-0"><span class="caption">Admin</span>
-            {{ form.is_admin }}
-            <div class="control__indicator"></div>
-          </label>
-        </div>
-        <div class="d-flex mb-5 align-items-center">
-          <label class="control control--checkbox mb-0"><span class="caption">Public User</span>
-            {{ form.is_public }}
-            <div class="control__indicator"></div>
-          </label>
-        </div>
-        <div class="d-flex mb-5 align-items-center">
-          <label class="control control--checkbox mb-0"><span class="caption">Owner</span>
-            {{ form.is_owner }}
-            <div class="control__indicator"></div>
-          </label>
+        <div class="row">
+          <div class="col-md-2">
+            <label class="control control--checkbox mb-0"><span class="caption">Admin</span>
+              {{ form.is_admin }}
+              <div class="control__indicator"></div>
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label class="control control--checkbox mb-0"><span class="caption">Public User</span>
+              {{ form.is_public }}
+              <div class="control__indicator"></div>
+            </label>
+          </div>
+          <div class="col-md-2">
+            <label class="control control--checkbox mb-0"><span class="caption">Owner</span>
+              {{ form.is_owner }}
+              <div class="control__indicator"></div>
+            </label>
+          </div>
         </div>
         <span class="text-error">{{ form.errors }}</span>
-        <input type="submit" value="Register" class="btn btn-pill text-white btn-block btn-primary">
+        <input type="submit" value="Register" class="btn btn-pill text-white btn-block btn-primary" id="login-buuton">
       </form>
     </div>
   </div>
-
-
-
 
 </div>
 
