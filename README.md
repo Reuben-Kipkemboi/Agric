@@ -43,18 +43,19 @@ Login
 
 Home Module
 
-![News Highlights](./app/static/images/home.png)
+![Okoa Farm](./app/static/images/home.png)
+
+Why OKOA FARM
+
+![Why Okoa Farm ](./app/static/images/why.png)
+
+
+Our services
+
+![Services](./app/static/images/service.png)
 
 
 
-Create a okoa-farm
-
-![business](./app/static/images/create.png)
-
-
-Create New Business in your okoa-farm
-
-![create Business ](./app/static/images/api.png)
 
 
 ## Behaviour Driven Development
