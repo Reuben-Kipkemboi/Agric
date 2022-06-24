@@ -12,6 +12,8 @@
 
 ## Description
 Buying farming machinery is expensive and so most farmers afford to hire.The Hiring process is always hectic and time wasting thus making farming activities late.On the other hand machinery operators can’t be trusted because they make false promises.
+
+
 [Go Back to the top](#okoa-farm)
 
 
