@@ -20,12 +20,6 @@ def services(request):
     machineries = Machinery.objects.all()
     return render(request, 'public/services.html', {'machineries': machineries})
 
-
-# base-register
-# def base_register(request):
-#     return render(request, 'logins/base_register.html')
-
-
 # def public_register(request):
 #     if request.method == 'POST':
 #         first_name = request.POST['first_name']
