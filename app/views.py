@@ -9,8 +9,6 @@ from django.contrib.auth.decorators import login_required
 
 # APPLICATION VIEWS.
 # home function
-
-
 def home(request):
     comments= Feedback.objects.all()
     return render(request, 'public/index.html', {'comments':comments})
