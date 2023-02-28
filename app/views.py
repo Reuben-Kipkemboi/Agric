@@ -14,6 +14,7 @@ def home(request):
     return render(request, 'public/index.html', {'comments':comments})
 
 
+
 def services(request):
     machineries = Machinery.objects.all()
     return render(request, 'public/services.html', {'machineries': machineries})
