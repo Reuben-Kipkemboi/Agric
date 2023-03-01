@@ -80,7 +80,7 @@ ul li{
     list-style:none ;
 }
 #image2{
-    height: 210px;
+    height: 400px;
     object-fit: cover;
     width: 100%;
 }
@@ -171,7 +171,7 @@ ul li{
     font-size: 4vh;
 
 }
-#planting-as-service{
+#planting-as-service, #ploughing-as-service{
     font-size: 3vh;
     font-weight: bolder;
 }
