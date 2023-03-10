@@ -215,6 +215,7 @@
     <div class="col-md-6 mx-auto">
       <section class="subscribe">
         <form class="feedback-form" action="" method="POST">
+          {% csrf_token %} 
           <!-- Name input -->
           <div class="form-outline mb-4 p-3">
             <input type="text" id="form4Example1" class="form-control" />
