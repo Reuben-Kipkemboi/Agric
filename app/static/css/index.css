@@ -162,14 +162,17 @@ ul li{
     font-size: 5vh;
 }
 .first, .last{
-    font-size: 2vh;
+    font-size: 2.5vh;
     color: #133831;
 }
 #login-buuton{
     background-color: rgb(2,56,49);
     font-weight: bold;
     color: #ffc703;
+    font-size: 2vh;
+    padding: 2%;
 }
+
 
 #featured-heading{
     font-size: 4vh;
@@ -178,4 +181,35 @@ ul li{
 #planting-as-service, #ploughing-as-service{
     font-size: 3vh;
     font-weight: bolder;
+}
+.not-member{
+    font-size: 1.8vh;
+    color: #133831;
+}
+#facebook{
+    background-color: #ffc703; 
+    color: #023831;
+    font-size: 1.5vh;
+    font-weight: 700;
+    padding: 1%;
+    margin-right: 2%;
+}
+#twitter{
+    background-color: #023831;
+    color: #fff;
+    font-size: 1.5vh;
+    font-weight: 700;
+    padding: 1%;
+    margin-right: 2%;
+
+}
+#google{
+    color:#023831;
+    font-size: 1.5vh;
+    font-weight: 700;
+    padding: 1%;
+    margin-right: 2%;
+}
+#login-btns{
+    margin-bottom: 3%;
 }

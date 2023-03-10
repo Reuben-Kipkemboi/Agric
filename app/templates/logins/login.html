@@ -27,11 +27,11 @@
             <form method="POST" class="col-md-10 mx-auto">
                 {% csrf_token %}
                 <div class="form-group first">
-                    <label for="username">Username</label>
+                    <label for="username" class="labele">Username</label>
                     {{ form.username }}
                 </div>
                 <div class="form-group last mb-4">
-                    <label for="username">Password</label>
+                    <label for="username" class="labele">Password</label>
                     {{ form.password }}
                 </div>
 
@@ -39,20 +39,22 @@
             </form>
 
             <!-- Register buttons -->
-            <div class="text-center p-2">
-                <p>Not a member? <a href="{% url 'register' %}">Register</a></p>
-                <p>or sign up with:</p>
-                <a class="btn" style="background-color: #ffc703; color: #023831;" href="#!" role="button">
+            <div class="text-center p-2" id="login-btns">
+                <p class="not-member">Not a member? <a href="{% url 'register' %}">Register</a></p>
+                <p class="not-member">or sign up with:</p>
+
+                <!-- facebook login button -->
+                <a class="btn" href="#!" role="button" id="facebook">
                     <i class="fab fa-facebook me-2"></i>
                     Facebook
                 </a>
-
-                <a class="btn text-white" style="background-color: #023831;" href="#!" role="button">
+<!-- twitter login button -->
+                <a class="btn text-white" id="twitter" href="#!" role="button">
                     <i class="fab fa-twitter me-2"></i>
                     Twitter
                 </a>
-
-                <a class="btn" style="color:#023831;" href="#!" role="button">
+<!-- google login button -->
+                <a class="btn" id="google" href="#!" role="button">
                     <i class="fab fa-google me-2"></i>
                     Google
                 </a>
