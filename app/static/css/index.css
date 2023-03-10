@@ -161,6 +161,10 @@ ul li{
     font-weight: bold;
     font-size: 5vh;
 }
+.first, .last{
+    font-size: 2vh;
+    color: #133831;
+}
 #login-buuton{
     background-color: rgb(2,56,49);
     font-weight: bold;
