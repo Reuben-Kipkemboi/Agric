@@ -34,7 +34,7 @@
                     <label for="username">Password</label>
                     {{ form.password }}
                 </div>
-                
+
                 <input type="submit" value="LOG IN TO OKOA FARM " class="btn btn-pill btn-block" id="login-buuton">
             </form>
 
@@ -42,9 +42,21 @@
             <div class="text-center p-2">
                 <p>Not a member? <a href="{% url 'register' %}">Register</a></p>
                 <p>or sign up with:</p>
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                    <i class="fab fa-facebook-f small-icons"></i>
-                </button>
+                <a class="btn" style="background-color: #ffc703; color: #023831;" href="#!" role="button">
+                    <i class="fab fa-facebook me-2"></i>
+                    Facebook
+                </a>
+
+                <a class="btn text-white" style="background-color: #023831;" href="#!" role="button">
+                    <i class="fab fa-twitter me-2"></i>
+                    Twitter
+                </a>
+
+                <a class="btn" style="color:#023831;" href="#!" role="button">
+                    <i class="fab fa-google me-2"></i>
+                    Google
+                </a>
+
 
             </div>
         </div>
@@ -53,24 +65,3 @@
 
 {% endblock content %}
 
-<!-- <form  method="post">
-    {% csrf_token %}
-  <div class="form-group first">
-    <label for="username">Username</label>
-      {{ form.username }}
-  </div>
-  <div class="form-group last mb-4">
-    <label for="username">Password</label>
-    {{ form.password }}
-  </div>
-
-  <div class="d-flex mb-5 align-items-center">
-    <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-      <input type="checkbox" checked="checked"/>
-      <div class="control__indicator"></div>
-    </label>
-    <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
-  </div>
-
-  <input type="submit" value="Log In" class="btn btn-pill text-white btn-block btn-primary">
-</form> -->
