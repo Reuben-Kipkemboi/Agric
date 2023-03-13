@@ -47,7 +47,7 @@ class SignUpForm(UserCreationForm):
     username = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                "class": "form-control"
+                "class": "form-control","style":'height:4.5vh;'
             }
         )
     )
@@ -55,7 +55,7 @@ class SignUpForm(UserCreationForm):
         widget=forms.PasswordInput(
             attrs={
                 "class": "form-control",'data-toggle': 'password',
-                 'id': 'password',
+                 'id': 'password',"style":'height:4.5vh;'
             }
         )
     )
@@ -63,7 +63,7 @@ class SignUpForm(UserCreationForm):
         widget=forms.PasswordInput(
             attrs={
                 "class": "form-control",'data-toggle': 'password',
-                 'id': 'password',
+                 'id': 'password',"style":'height:4.5vh;'
                 
             }
         )
@@ -71,7 +71,7 @@ class SignUpForm(UserCreationForm):
     email = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                "class": "form-control"
+                "class": "form-control","style":'height:4.5vh;'
             }
         )
     )

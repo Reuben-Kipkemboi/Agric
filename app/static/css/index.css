@@ -213,3 +213,8 @@ ul li{
 #login-btns{
     margin-bottom: 3%;
 }
+#par-register{
+    font-size: 4vh;
+    color: #023831;
+    font-weight: 700;
+}
