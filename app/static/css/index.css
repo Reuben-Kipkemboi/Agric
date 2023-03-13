@@ -226,12 +226,8 @@ ul li{
     color: #023831;
     font-weight: 700;
 }
-#person-commenting{
-    height: 20px;
-    width: 20px;
-    object-fit: contain;
-}
-#person-commenting-alt{
+
+#person-commenting,#person-commenting-alt{
     height: 250px;
     width: 250px;
     object-fit: contain;
@@ -251,6 +247,7 @@ ul li{
 .comment-comment{
     color:#ffc703;
     font-size: 1.7vh;
+    font-family: 'Gabriela', serif;
 }
 #c{
     outline: 2px solid #ffc703;
@@ -258,9 +255,11 @@ ul li{
 #comment-rating-by-user{
     color: #ffc703;
     font-size: 3vh;
+    font-family: 'Gabriela', serif;
 }
 .sc{
     color: #ffc703;
     font-size: 1.5vh;
+    font-family: 'Gabriela', serif;
 
 }
