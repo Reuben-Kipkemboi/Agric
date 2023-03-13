@@ -225,3 +225,15 @@ ul li{
     color: #023831;
     font-weight: 700;
 }
+#person-commenting{
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+}
+#person-commenting-alt{
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+}
+
+}

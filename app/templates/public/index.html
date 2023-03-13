@@ -54,10 +54,10 @@
     <h3 class="okoa">Why OKOA FARM</h3>
     <div class="row">
       <div class="col-md-7 pb-5 slogan text-dark">
-        We seek to create opportunities <span id="yellow">for  everyone to be a part
-          of our  farming growth </span> by availing the neces<span id="yellow">sary, 
-        required
-        machinery and farm equipments to you.</span> 
+        We seek to create opportunities <span id="yellow">for everyone to be a part
+          of our farming growth </span> by availing the neces<span id="yellow">sary,
+          required
+          machinery and farm equipments to you.</span>
       </div>
       <div class="col-md-4"></div>
     </div>
@@ -131,7 +131,7 @@
     </div>
   </div>
 
-<!-- cards below -->
+  <!-- cards below -->
   <div class="row mt-5">
     <div class="col-lg-4 col-md-12 mb-4">
       <div class="card">
@@ -189,24 +189,32 @@
       </div>
     </div>
   </div>
-  
+
   <div class="row mb-4 ">
     <h3 id="clients">WHAT OUR CUSTOMERS SAY</h3>
     {% for comment in comments %}
-    <div class="col-md-3 mx-auto" >
-      <div class="card p-4"id="comment-card" >
+    <div class="col-md-3 mx-auto">
+      <div class="card p-4" id="comment-card">
         <p class="card-title text-white">{{comment.user_name}}</p>
+        {% if request.user.profile.profile_pic %}
+        <img src="{{request.user.profile.profile_pic.url}}" class="rounded-circle" alt="User" loading="lazy"
+          id="person-commenting" />
+        {%else %}
+        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle shadow"
+        id="person-commenting-alt"
+          alt="Black and White Portrait of a Man" loading="lazy" />
+        {% endif %}
         <p class="text-warning">"{{comment.content}}"</p>
         <a class="btn btn-outline-warning btn-sm mb-3" id="c">
           <h3>{{comment.rating }}</h3>
           <span class="sc">My service Rate</span>
-      </a>
+        </a>
 
       </div>
 
     </div>
     {% endfor %}
-   
+
   </div>
 
 
@@ -215,7 +223,7 @@
     <div class="col-md-6 mx-auto">
       <section class="subscribe">
         <form class="feedback-form" action="" method="POST">
-          {% csrf_token %} 
+          {% csrf_token %}
           <!-- Name input -->
           <div class="form-outline mb-4 p-3">
             <input type="text" id="form4Example1" class="form-control" />
@@ -243,5 +251,3 @@
 </div>
 
 {% endblock content %}
-
-
