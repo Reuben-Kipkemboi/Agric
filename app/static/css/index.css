@@ -129,6 +129,7 @@ ul li{
 }
 #comment-card{
     background-color: #133831;
+    text-align: center;
 }
 #clients{
     padding:2%;
@@ -234,6 +235,32 @@ ul li{
     height: 250px;
     width: 250px;
     object-fit: contain;
+    outline: 1px dashed #ffc703;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+#comment-username{
+    text-align: center;
+    color: white;
+    font-family: 'Gabriela', serif;
+    font-size: 3vh;
+
+
+}
+.comment-comment{
+    color:#ffc703;
+    font-size: 1.7vh;
+}
+#c{
+    outline: 2px solid #ffc703;
+}
+#comment-rating-by-user{
+    color: #ffc703;
+    font-size: 3vh;
+}
+.sc{
+    color: #ffc703;
+    font-size: 1.5vh;
 
 }

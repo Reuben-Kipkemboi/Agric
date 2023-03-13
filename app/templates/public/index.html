@@ -195,7 +195,7 @@
     {% for comment in comments %}
     <div class="col-md-3 mx-auto">
       <div class="card p-4" id="comment-card">
-        <p class="card-title text-white">{{comment.user_name}}</p>
+        
         {% if request.user.profile.profile_pic %}
         <img src="{{request.user.profile.profile_pic.url}}" class="rounded-circle" alt="User" loading="lazy"
           id="person-commenting" />
@@ -204,9 +204,10 @@
         id="person-commenting-alt"
           alt="Black and White Portrait of a Man" loading="lazy" />
         {% endif %}
-        <p class="text-warning">"{{comment.content}}"</p>
-        <a class="btn btn-outline-warning btn-sm mb-3" id="c">
-          <h3>{{comment.rating }}</h3>
+        <p class="card-title text-white" id="comment-username">{{comment.user_name}}</p>
+        <p class="comment-comment">"{{comment.content}}"</p>
+        <a class="btn btn-sm mb-3" id="c">
+          <h3 id="comment-rating-by-user">{{comment.rating }}</h3>
           <span class="sc">My service Rate</span>
         </a>
 
