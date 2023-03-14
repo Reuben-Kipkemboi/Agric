@@ -205,7 +205,7 @@
           alt="Black and White Portrait of a Man" loading="lazy" />
         {% endif %}
         <p class="card-title text-white" id="comment-username">{{comment.user_name}}</p>
-        <p class="comment-comment">"{{comment.content}}"</p>
+        <p class="comment-comment">"{{comment.content|slice:":365"|add:"........" }}"</p>
         <a class="btn btn-sm mb-3" id="c">
           <h3 id="comment-rating-by-user">{{comment.rating }}</h3>
           <span class="sc">My service Rate</span>
