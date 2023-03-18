@@ -184,7 +184,10 @@ ul li{
 
 
 #featured-heading{
-    font-size: 4vh;
+    font-size: 6vh;
+    color: #023831;
+    font-weight: bold;
+    text-align: center;
 
 }
 #planting-as-service, #ploughing-as-service{
