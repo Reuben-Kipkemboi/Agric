@@ -1,14 +1,29 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 *{
     font-family: 'Inter', sans-serif;
-    padding: 0;
-    margin: 0;
+    /* padding: 0;
+    margin: 0; */
     box-sizing: border-box;
 }
+.welcome-message{
+    background-color: #507063;
+}
+.welcome{
+    color: #fff;
+    font-size: 2vh;
+    font-weight: bold;
+}
+.agriculture{
+    font-size: 11vh;
+    font-family: 'Handlee', cursive;
+    color: #fff;
+    font-weight: bold;
+    padding: 10%;
+}
+
 .hero{
     background-color: #133831;
     border-radius: 100% 0% 100% 0% / 66% 100% 0% 34%  ;
