@@ -1,18 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
-
-/* fira code */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Gabriela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 *{
-    /* font-family: 'Handlee', cursive; */
-    font-family: 'Gentium Plus', serif;
-
-
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 .hero{
     background-color: #133831;
@@ -184,7 +179,7 @@ ul li{
 
 
 #featured-heading{
-    font-size: 6vh;
+    font-size: 5vh;
     color: #023831;
     font-weight: bold;
     text-align: center;
