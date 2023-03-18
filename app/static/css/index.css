@@ -6,10 +6,12 @@
 /* fira code */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Gabriela&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
 *{
-    /* font-family: 'Chakra Petch', sans-serif; */
+    /* font-family: 'Handlee', cursive; */
     font-family: 'Gentium Plus', serif;
-    /* font-family: 'Gabriela', serif; */
+
 
 }
 .hero{
@@ -254,10 +256,11 @@ ul li{
 #comment-rating-by-user{
     color: #ffc703;
     font-size: 3vh;
-    font-family: 'Gabriela', serif;
+    font-family: 'Handlee', cursive;
 }
 .sc{
     color: #ffc703;
     font-size: 1.5vh;
-    font-family: 'Gabriela', serif;
+        /* font-family: 'Handlee', cursive; */
+
 }
