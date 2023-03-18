@@ -58,7 +58,9 @@ strong{
 .okoa{
     padding-top:3%;
     padding-left: 3%;
-    font-size: 4vh;
+    font-size: 6vh;
+    text-align: center;
+    color: #fff;
 }
 .slogan{
     padding-bottom: 4%;
@@ -113,10 +115,7 @@ ul li{
 #yellow{
     color:#fdc730;
 }
-.okoa{
-    font-weight: bold;
-    color: #000;
-}
+
 .green{
     color: #fff;
     font-weight: bold;
