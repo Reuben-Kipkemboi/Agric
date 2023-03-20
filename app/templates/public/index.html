@@ -2,25 +2,83 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid">
-  <div class="welcome-message">
-    <p class="welcome">WELCOME TO OKOA FARM</p>
-
-    <p class="agriculture">OKOA FARM & OKOA TIME </p>
-
-
+  <!-- Carousel wrapper -->
+<div id="carouselDarkVariant" class="carousel slide carousel-fade carousel-dark" data-mdb-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button
+      data-mdb-target="#carouselDarkVariant"
+      data-mdb-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      data-mdb-target="#carouselDarkVariant"
+      data-mdb-slide-to="1"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      data-mdb-target="#carouselDarkVariant"
+      data-mdb-slide-to="2"
+      aria-label="Slide 1"
+    ></button>
   </div>
 
+  <!-- Inner -->
+  <div class="carousel-inner">
+    <!-- Single item -->
+    <div class="carousel-item active" id="active">
+      <img src="{% static 'images/transport.jpg' %}" alt="tractor in transport"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="c-text-1">WELCOME TO OKOA FARM</h5>
+        <p class="c-text-1">AGRICULTURE & ECO-FARMING.</p>
+      </div>
+    </div>
 
+    <!-- Single item -->
+    <div class="carousel-item">
+      <img src="{% static 'images/planting.jpeg' %}" class="d-block w-100" alt="tractor planting"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="c-text-2">OKOA FARM, OKOA TIME</h5>
+        <p class="c-text-2">SAVE TIME PRODUCTIVELY, REAP PROFITABLY.</p>
+      </div>
+    </div>
 
+    <!-- Single item -->
+    <div class="carousel-item">
+      <img src="{% static 'images/lima.jpg' %}" class="d-block w-100" alt="ploughing tractor"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="c-text-3">WE ARE YOU</h5>
+        <p class="c-text-3">TRUST WE ARE YOU.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Inner -->
 
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselDarkVariant" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-mdb-target="#carouselDarkVariant" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- Carousel wrapper -->
+  <div class="welcome-message">
+
+   
+ 
   <div class="row">
     <p>Our Services List...</p>
     <div class="row">
-      <h4 class="what-we-offering" id="featured-heading"> What we're offering</h4>
+      <!-- <h4 class="what-we-offering" id="featured-heading"> What we're offering</h4> -->
 
     </div>
     <div class="row">
-      <p class="text-center text-white fs-2">What our owners offer...</p>
+      <p class="text-center text-white fs-1">What our owners offer...</p>
     </div>
     <div class="row p-4">
       <div class="col-md-4 text-center mb-5">
