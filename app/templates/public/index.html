@@ -179,7 +179,7 @@
         <img src="{{request.user.profile.profile_pic.url}}" class="rounded-circle" alt="User" loading="lazy"
           id="person-commenting" />
         {%else %}
-        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle shadow"
+        <img src="{% static 'images/7309681.jpg' %}" class="rounded-circle shadow"
           id="person-commenting-alt" alt="Black and White Portrait of a Man" loading="lazy" />
         {% endif %}
         <p class="card-title text-white" id="comment-username">{{comment.user_name}}</p>
