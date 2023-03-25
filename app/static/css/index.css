@@ -9,9 +9,9 @@
     box-sizing: border-box;
 }
 .welcome-message{
-    /* background-color: #507063;*/
-    background-color: #133831;
-    border-radius: 100% 0% 100% 0% / 66% 100% 0% 34%; 
+    background-color: #023831;
+    /* border-radius: 100% 0% 100% 0% / 66% 100% 0% 34%;  */
+    border-radius: 6% 94% 0% 100% / 0% 0% 100% 100%;
     height: 70vh;
 }
 .welcome{
@@ -51,7 +51,17 @@
     text-align: center;
     color: #fdc730;
     font-size: 2vh;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-weight: 700;
+    font-family: 'Handlee', cursive;
 
+}
+.owners-services{
+    /* font-weight: bold; */
+    color: #fff;
+    text-align: center;
+    font-size: 3vh;
 }
 /* .hero{
     background-color: #133831;
