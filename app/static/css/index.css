@@ -331,3 +331,9 @@ ul li{
     font-weight: 900;
     
 }
+#register-link, #login-link{
+    background-color: #F7C35F;
+    font-size: 1.5vh;
+    color: #023831;
+    font-weight: 700;
+}
