@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
+        "courasel",
+        "marsey",
         "werser"
-    ]
+    ],
+    "livePreview.defaultPreviewPath": "/app/templates/public/index.html"
 }
