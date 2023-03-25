@@ -9,6 +9,9 @@
     margin: 0; */
     box-sizing: border-box;
 }
+#login-page{
+    background-image: url("/static/images/carriage.png");
+}
 .welcome-message{
     background-color: #023831;
     /* border-radius: 100% 0% 100% 0% / 66% 100% 0% 34%;  */
@@ -56,7 +59,6 @@
     padding-bottom: 2%;
     font-weight: 700;
     font-family: 'Handlee', cursive;
-
 }
 .owners-services{
     /* font-weight: bold; */
@@ -64,10 +66,6 @@
     text-align: center;
     font-size: 3vh;
 }
-/* .hero{
-    background-color: #133831;
-    border-radius: 100% 0% 100% 0% / 66% 100% 0% 34%  ;
-} */
 #register-btn{
     font-weight: 900;
     font-size: 3vh;
@@ -81,9 +79,11 @@ strong{
     /* color: #133831; */
     color: #1F4E3D;
     font-weight: 900;
-    font-size: 5.5vh;
+    font-size: 3vh;
     text-align: center;
     padding: 3%;
+    font-family: 'Handlee', cursive;
+    font-weight: 900;
 }
 #login-form{
     font-size: 3vh;
@@ -97,7 +97,6 @@ strong{
     width: 35px;
 }
 #nav{
-    /* background-color: #133831; */
     background-color:#1F4E3D;
 }
 .img{
@@ -127,8 +126,6 @@ strong{
 }
 #order-btn:hover{
     background-color: #000;
-    /* color: #fff; */
-    /* color: #fdc730; */
     color: #f7c35f;
     outline: 1px solid #fdc730;
 }
@@ -153,8 +150,6 @@ ul li{
 }
 #bio{
     font-size: 4vh;
-    /* color: #fdc730;
-     */
      color: #f7c35f;
 }
 #locate{
@@ -223,7 +218,8 @@ ul li{
 #par{
     color: #133831;
     font-weight: bold;
-    font-size: 5vh;
+    font-size: 3vh;
+    
 }
 .first, .last{
     font-size: 2.5vh;
@@ -336,4 +332,14 @@ ul li{
     font-size: 1.5vh;
     color: #023831;
     font-weight: 700;
+}
+#right{
+    background-color: #F7C35F;
+    height: 100vh;
+    width: 100%;
+}
+#left{
+    background-color: #023831;
+    height: 100vh;
+    width: 100%;
 }
