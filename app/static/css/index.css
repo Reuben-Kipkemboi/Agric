@@ -319,5 +319,13 @@ ul li{
 .sc{
     color: #ffc703;
     font-size: 1.5vh;
-
+}
+#send-feedback-btn{
+    padding: 1%;
+    font-size: 2vh;
+    background-color: #133831;
+    color: #ffc703;
+    font-family: 'Handlee', cursive;
+    font-weight: 900;
+    
 }
