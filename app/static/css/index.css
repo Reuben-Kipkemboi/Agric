@@ -565,3 +565,21 @@ hr{
     color: #ffffff;
     background-color: #F7C35F;
 }
+
+#machinery-properties, .machinery-properties{
+    font-size: 2vh;
+    color: #023831;
+}
+#remove-btn{
+    font-size: 1.8vh;
+    font-family: 'Handlee',cursive;
+    font-weight: bolder;
+}
+#update-btn{
+    font-size: 1.8vh;
+    font-family: 'Handlee',cursive;
+    font-weight: bold;
+    background-color: #023831;
+    color: #F7C35F;
+    font-weight: bolder;
+}
