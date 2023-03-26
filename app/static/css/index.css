@@ -614,3 +614,31 @@ hr{
     font-weight: 900;
     font-size: 2vh;
 }
+/* bootstrap form styling */
+.my-form-group label{
+    font-weight: bold;
+      color: #023831;
+      font-size: 1.5vh;
+
+}
+.my-form-group input {
+    border: none;
+    border-bottom: 1px solid #023831;
+    border-radius: 0;
+    margin-bottom: 2%;
+}
+#btn-update-machine{
+    color: #F7C35F;
+    background-color: #133831;
+    font-size: 1.5vh;
+    padding: 1%;
+    font-weight: 900;
+}
+#btn-update-machine-back-btn{
+    color: #023831;
+    background-color: #ffc703;
+    font-size: 1.5vh;
+    padding: 1%;
+    font-weight: 900;
+
+}

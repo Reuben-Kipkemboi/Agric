@@ -3,9 +3,9 @@
 {% load static %}
 {% block title %} Neighbour | update_machinery {% endblock title%}
 {% block content %}
-<div class="col-md-8 mx-auto mt-5 shadow p-5">
+<div class=" mx-auto mt-5 shadow p-5">
 
-    <h4 class="text-dark">Machinery Update Details</h4>
+    <h4 class="text-center">Machinery Update Details</h4>
     <hr>
     <div class="row">
         <!-- <div class="col-md-3"></div> -->
@@ -13,10 +13,9 @@
             <form action="" method="POST" enctype="multipart/form-data">
                 {%csrf_token%}
 
-                {% bootstrap_form form2 %}
-                <input type="submit" class="btn btn-primary btn-sm" value="Save Machinery Update">
-                <a href="{% url 'home' %}"><button type="button" class="btn btn-outline-info btn-sm"><i
-            class="fa-solid fa-angles-left"></i>Back Home</button></a>
+                {% bootstrap_form form2 layout='horizontal' button_type='submit' form_group_class='my-form-group' %}
+                <input type="submit" class="btn" value="Save Machinery Update" id="btn-update-machine">
+                <a href="{% url 'home' %}"><button type="button" class="btn" id="btn-update-machine-back-btn"><i class="fas fa-angle-left"></i> Back Home</button></a>
             </form>
         </div>
     </div>

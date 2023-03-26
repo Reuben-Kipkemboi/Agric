@@ -18,26 +18,6 @@ def services(request):
     machineries = Machinery.objects.all()
     return render(request, 'public/services.html', {'machineries': machineries})
 
-# def public_register(request):
-#     if request.method == 'POST':
-#         first_name = request.POST['first_name']
-#         last_name = request.POST['last_name']
-#         username = request.POST['username']
-#         email = request.POST['email']
-#         password1 = request.POST['password1']
-#         password2 = request.POST['password2']
-
-#         if password1 != password2:
-#             messages.error(
-#                 request, "Check your passwords to make sure they match")
-#             return redirect('/register')
-
-#         new_user = User.objects.create_user(
-#             first_name=first_name, last_name=last_name, username=username, email=email, password=password1)
-
-#         new_user.save()
-#         return redirect('login')
-#     return render(request, 'logins/register.html')
 
 # Register function
 
@@ -82,41 +62,6 @@ def user_login(request):
         else:
             messages.info = 'error validating form'
     return render(request, 'logins/login.html', {'form': form, 'msg': msg})
-
-# def owner_register(request):
-#     if request.method == 'POST':
-#         first_name = request.POST['first_name']
-#         last_name = request.POST['last_name']
-#         username = request.POST['username']
-#         email = request.POST['email']
-#         password1 = request.POST['password1']
-#         password2 = request.POST['password2']
-
-#         if password1 != password2:
-#             messages.error(
-#                 request, "Check your passwords to make sure they match")
-#             return redirect('/register')
-
-#         new_user = User.objects.create_user(
-#             first_name=first_name, last_name=last_name, username=username, email=email, password=password1)
-
-#         new_user.save()
-#         return redirect('login')
-#     return render(request, 'logins/register.html')
-
-
-# Login function
-# def user_login(request):
-#     if request.method == 'POST':
-#         username = request.POST['username']
-#         password = request.POST['password']
-
-#         user = authenticate(request, username=username, password=password)
-#         if user is not None:
-#             login(request, user)
-#             messages.success(request, "Welcome ,you are now logged in")
-#             return redirect("home")
-#     return render(request, 'login.html')
 
 #admin
 def admin(request):
