@@ -419,9 +419,6 @@ ul li {
 
 }
 
-#register-card {
-    
-}
 .caption{
     color: #023831;
     font-size: 1.5vh;
@@ -481,7 +478,6 @@ ul li {
     font-size: 4vh;
 }
 hr{
-    /* height: 12px; */
     border: 1px solid #023831;
     box-shadow: inset 0 12px 12px -12px rgba(19,56,49,0.5);
     width: 75%;
@@ -489,3 +485,4 @@ hr{
     margin-bottom: 1%;
 
 }
+/* register card-styling */
