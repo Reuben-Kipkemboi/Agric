@@ -1,48 +1,58 @@
 {% extends "public/base.html" %}
 {% block title %}Profile Page{% endblock title %}
 {% block content %}
-<div class="row my-3 p-3">
-    <h4 class="text-center">Welcome {{user.username}}</h4>
-</div>
 
 <div class="container">
-    <div class="col-md-7 shadow-lg mx-auto p-4">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="col-md-4">
-                    <img src="{{request.user.profile.profile_pic.url}}" class="rounded-circle border border-secondary"
-                        alt="{{request.user.username}}" id="profile_pic">
-                </div>
+    <div class="col-lg-7 col-md-8">
+        <h4 class="text-center" id="welcome-profile">Welcome {{user.username}}</h4>
+        <div class="member">
+            <img src="{{request.user.profile.profile_pic.url}}" class="rounded-circle border border-secondary"
+                alt="{{request.user.username}}" id="profile_pic">
+            <h4>{{request.user.first_name}} {{request.user.last_name}}</h4>
+            <p>
+                {{request.user.profile.biography}}
+            </p>
+            <p>
+                {{request.user.profile.email}}
+            </p>
+            <p>{{request.user.profile.location}}</p>
+
+            <div class="social">
+                <!-- Facebook -->
+                <a class="btn text-white" style="background-color: #3b5998;" href="#!" role="button">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <!-- Twitter -->
+                <a class="btn text-white" style="background-color: #55acee;" href="#!" role="button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <!-- Google -->
+                <a class="btn text-white" style="background-color: #dd4b39;" href="#!" role="button">
+                    <i class="fab fa-google"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a class="btn text-white" style="background-color: #ac2bac;" href="#!" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
             </div>
-            <div class="col-md-8">
-                <h5 class="ms-2 text-center">User Name:{{request.user.username}}
-                </h5>
-                <h5>Full Name: {{request.user.first_name}} {{request.user.last_name}}</h5>
+            <p class="text-center">
+                <a href="{% url 'update' %}"><button type="button" class="btn btn-outline-secondary mx-auto"><i
+                            class="fa-solid fa-pen-to-square"></i>Edit profile</button></a>
 
-                <hr>
-                <p class="text-center" id="bio">About Me</p>
-
-                <p>{{request.user.profile.biography}}</p>
-
-                <p class="text-center" id="locate">Location</p>
-
-                <p>{{request.user.profile.location}}</p>
-                <hr class="hr">
-                <p class="text-center">
-                    <a href="{% url 'update' %}"><button type="button" class="btn btn-outline-secondary mx-auto"><i
-                                class="fa-solid fa-pen-to-square"></i>Edit profile</button></a>
-
-                    <a href="{% url 'home' %}"><button type="button" class="btn btn-outline-secondary "><i
-                                class="fa-solid fa-angles-left"></i>Back Home</button></a>
-                </p>
-
-
-            </div>
-
-
-
+                <a href="{% url 'home' %}"><button type="button" class="btn btn-outline-secondary "><i
+                            class="fa-solid fa-angles-left"></i>Back Home</button></a>
+            </p>
         </div>
     </div>
+</div>
 
 
-    {% endblock content %}
+
+
+
+
+{% endblock content %}
