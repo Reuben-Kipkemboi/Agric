@@ -8,7 +8,7 @@
 }
 
 #login-page {
-    background-image: url("/static/images/background.jpg");
+    background-image: url("/static/images/tiny.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 95vh;
@@ -72,7 +72,6 @@
 }
 
 .owners-services {
-    /* font-weight: bold; */
     color: #fff;
     text-align: center;
     font-size: 3vh;
@@ -425,4 +424,66 @@ ul li {
     color: #023831;
     font-size: 1.5vh;
     font-weight: 700;
+}
+
+/* contact section */
+#contact-details-header{
+    color: #023831;
+    font-size: 3vh;
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+}
+.love-to-hear{
+    color: #023831;
+    font-size: 2vh;
+
+}
+.location-location{
+    color: #023831;
+    font-size: 2vh;
+}
+.fa-solid{
+    color: #023831;
+    font-size: 2vh;
+}
+.info{
+    padding: 4%;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  border-bottom: 3px solid #023831;
+  border-top: 6px solid #ffc703;
+
+}
+#feedback-from-user{
+    padding: 4%;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  border-bottom: 3px solid #023831;
+  border-top: 6px solid #ffc703;
+
+}
+#contact-details-header{
+    text-align: center;
+    font-size: 4vh;
+}
+hr{
+    /* height: 12px; */
+    border: 1px solid #023831;
+    box-shadow: inset 0 12px 12px -12px rgba(19,56,49,0.5);
+    width: 75%;
+    margin: auto;
+    margin-bottom: 1%;
+
 }
