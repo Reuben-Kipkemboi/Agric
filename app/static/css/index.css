@@ -642,3 +642,9 @@ hr{
     font-weight: 900;
 
 }
+#password, #username, #email{
+    height:4.5vh;
+    border: none;
+    border-bottom: 2px solid #023831;
+
+}
