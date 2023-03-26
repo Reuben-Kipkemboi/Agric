@@ -584,3 +584,33 @@ hr{
     color: #F7C35F;
     font-weight: bolder;
 }
+/* modal-styling */
+#exampleModalLabel{
+    color: #023831;
+    font-size: 2vh;
+    font-weight: bold;
+}
+#close-button
+{
+    color: #023831;
+    background-color: #ffc703;
+    font-size: 1.5vh;
+    padding: 1%;
+    font-weight: 900;
+}
+#save-button{
+    color: #F7C35F;
+    background-color: #133831;
+    font-size: 1.5vh;
+    padding: 1%;
+    font-weight: 900;
+
+}
+.yellow-link{
+    color: #ffc703;
+}
+.form-label{
+    color: #133831;
+    font-weight: 900;
+    font-size: 2vh;
+}
