@@ -1,11 +1,10 @@
 {% extends "public/base.html" %}
 {% block title %}Profile Page{% endblock title %}
 {% block content %}
-
-<div class="container">
-    <div class="col-lg-7 col-md-8">
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="col-md-6 mx-auto">
         <h4 class="text-center" id="welcome-profile">Welcome {{user.username}}</h4>
-        <div class="member">
+        <div class="member mx-auto">
             <img src="{{request.user.profile.profile_pic.url}}" class="rounded-circle border border-secondary"
                 alt="{{request.user.username}}" id="profile_pic">
             <h4>{{request.user.first_name}} {{request.user.last_name}}</h4>

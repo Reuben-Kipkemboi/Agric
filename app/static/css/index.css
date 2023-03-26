@@ -537,3 +537,12 @@ hr{
     font-family: 'Handlee', cursive;
 
 }
+/* update profile-styling */
+#color-green{
+    background-color: #023831;
+    height: 100vh;
+}
+.update-profile{
+    background-color: #ffffff;
+    padding: 2%;
+}
