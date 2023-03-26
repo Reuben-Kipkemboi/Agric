@@ -2,59 +2,66 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
-*{
+* {
     font-family: 'Inter', sans-serif;
-    /* font-family: 'Handlee', cursive; */
-    /* padding: 0;
-    margin: 0; */
     box-sizing: border-box;
 }
-#login-page{
-    background-image: url("/static/images/carriage.png");
+
+#login-page {
+    background-image: url("/static/images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 95vh;
 }
-.welcome-message{
+
+.welcome-message {
     background-color: #023831;
-    /* border-radius: 100% 0% 100% 0% / 66% 100% 0% 34%;  */
     border-radius: 0% 100% 0% 100% / 12% 0% 100% 91%;
     height: 70vh;
 }
-.welcome{
+
+.welcome {
     color: #fff;
     font-size: 2vh;
     font-weight: bold;
 }
-#courasel1, #courasel2, #courasel3{
+
+#courasel1,
+#courasel2,
+#courasel3 {
     width: 100%;
-    height:80vh;
+    height: 80vh;
     object-fit: cover;
 
 }
-.agriculture{
+
+.agriculture {
     font-size: 11vh;
     font-family: 'Handlee', cursive;
     color: #fff;
     font-weight: bold;
     padding: 10%;
 }
-.c-text-1{
+
+.c-text-1 {
     color: #ffffff;
     font-weight: bolder;
     font-family: 'Handlee', cursive;
 }
-.c-text-2{
+
+.c-text-2 {
     color: #fff;
     font-weight: bolder;
     font-family: 'Handlee', cursive;
 }
-.c-text-3{
+
+.c-text-3 {
     color: #fff;
     font-weight: bolder;
     font-family: 'Handlee', cursive;
 }
-.services-list{
+
+.services-list {
     text-align: center;
     color: #fdc730;
     font-size: 2vh;
@@ -63,22 +70,26 @@
     font-weight: 700;
     font-family: 'Handlee', cursive;
 }
-.owners-services{
+
+.owners-services {
     /* font-weight: bold; */
     color: #fff;
     text-align: center;
     font-size: 3vh;
 }
-#register-btn{
+
+#register-btn {
     font-weight: 900;
     font-size: 3vh;
 }
-strong{
-    color: #000;
+
+strong {
+    color: #023831;
     font-weight: 900;
-    font-size: 5vh;
+    font-size: 3vh;
 }
-#login-slogan{
+
+#login-slogan {
     /* color: #133831; */
     color: #1F4E3D;
     font-weight: 900;
@@ -88,182 +99,222 @@ strong{
     font-family: 'Handlee', cursive;
     font-weight: 900;
 }
-#login-form{
+
+#login-form {
     font-size: 3vh;
     font-weight: 600;
 }
-#logo-login{
+
+#logo-login {
     height: 100px;
 }
-#logo{
+
+#logo {
     height: 35px;
     width: 35px;
 }
-#nav{
-    background-color:#1F4E3D;
+
+#nav {
+    background-color: #1F4E3D;
 }
-.img{
+
+.img {
     width: 100%;
     height: 80vh;
     object-fit: cover;
 }
-.okoa{
-    padding-top:3%;
+
+.okoa {
+    padding-top: 3%;
     padding-left: 3%;
     font-size: 6vh;
     text-align: center;
     color: #fff;
 }
-.slogan{
+
+.slogan {
     padding-bottom: 4%;
     padding-top: 2%;
     padding-left: 3%;
     font-size: 3vh;
-    font-family: 'Gabriela', serif; 
+    font-family: 'Gabriela', serif;
 }
-#order-btn{
+
+#order-btn {
     width: 130px;
     font-size: 3vh;
     font-weight: 700;
 
 }
-#order-btn:hover{
+
+#order-btn:hover {
     background-color: #000;
     color: #f7c35f;
     outline: 1px solid #fdc730;
 }
-.order-btn{
+
+.order-btn {
     padding-left: 3%;
 
 }
-ul li{
-    list-style:none ;
+
+ul li {
+    list-style: none;
 }
-#image2{
+
+#image2 {
     height: 400px;
     object-fit: cover;
     width: 100%;
 }
-#profile_pic{
+
+#profile_pic {
     height: 150px;
     width: 150px;
     object-fit: cover;
     box-shadow: 4px 4px 4px 3px;
 
 }
-#bio{
+
+#bio {
     font-size: 4vh;
-     color: #f7c35f;
+    color: #f7c35f;
 }
-#locate{
+
+#locate {
     font-size: 4vh;
     /* color: #fdc730; */
     color: #f7c35f;
 
 }
-.hr{
+
+.hr {
     border-bottom: 2px solid #133831;
 }
-#yellow{
-    color:#fdc730;
+
+#yellow {
+    color: #fdc730;
 }
-#card-text-3, #card-text-2, #card-text-1{
+
+#card-text-3,
+#card-text-2,
+#card-text-1 {
     font-size: 1.7vh;
     color: #133831;
 }
-.green{
+
+.green {
     color: #fff;
     font-weight: bold;
 }
-.black{
+
+.black {
     color: #fdc730;
 }
-#comment-bg{
+
+#comment-bg {
     object-fit: cover;
 }
-#comment-card{
+
+#comment-card {
     background-color: #133831;
     text-align: center;
 }
-#clients{
-    padding:2%;
+
+#clients {
+    padding: 2%;
     font-size: 4vh;
     text-align: center;
     border-right: 2px solid #133831;
     color: #133831;
 
 }
-.link-link{
+
+.link-link {
     color: #fdc730;
     font-size: 3vh;
     font-weight: 700;
 }
-.link-link:hover{
+
+.link-link:hover {
     color: #fff;
 }
-#services-page{
+
+#services-page {
     background-color: #133831;
     border-radius: 100% 0% 0% 100% / 44% 48% 52% 56%;
     height: 150vh;
 }
-#order-title{
+
+#order-title {
     color: #133831;
     font-weight: bold;
 }
-.headings{
+
+.headings {
     color: #133831;
     font-weight: bold;
 }
-#button-card{
+
+#button-card {
     height: 15vh;
     padding: 3%;
 }
-#par{
+
+#par {
     color: #133831;
     font-weight: bold;
     font-size: 3vh;
 
 }
-.first, .last{
+
+.first,
+.last {
     font-size: 2.5vh;
     color: #133831;
 }
-#login-buuton{
-    background-color: rgb(2,56,49);
+
+#login-buuton {
+    background-color: rgb(2, 56, 49);
     font-weight: bold;
     color: #ffc703;
     font-size: 2vh;
     padding: 2%;
 }
 
-
-#featured-heading{
+#featured-heading {
     font-size: 5vh;
     color: #023831;
     font-weight: bold;
     text-align: center;
 
 }
-#planting-as-service, #ploughing-as-service,#card-title-3{
+
+#planting-as-service,
+#ploughing-as-service,
+#card-title-3 {
     font-size: 2vh;
     font-weight: bolder;
     color: #133831;
     font-family: 'Handlee', cursive;
     text-align: center;
 }
-.not-member{
+
+.not-member {
     font-size: 1.8vh;
     color: #133831;
 }
-#facebook{
-    background-color: #ffc703; 
+
+#facebook {
+    background-color: #ffc703;
     color: #023831;
     font-size: 1.5vh;
     font-weight: 700;
     padding: 1%;
     margin-right: 2%;
 }
-#twitter{
+
+#twitter {
     background-color: #023831;
     color: #fff;
     font-size: 1.5vh;
@@ -272,23 +323,27 @@ ul li{
     margin-right: 2%;
 
 }
-#google{
-    color:#023831;
+
+#google {
+    color: #023831;
     font-size: 1.5vh;
     font-weight: 700;
     padding: 1%;
     margin-right: 2%;
 }
-#login-btns{
+
+#login-btns {
     margin-bottom: 3%;
 }
-#par-register{
-    font-size: 4vh;
+
+#par-register {
+    font-size: 3vh;
     color: #023831;
     font-weight: 700;
 }
 
-#person-commenting,#person-commenting-alt{
+#person-commenting,
+#person-commenting-alt {
     height: 200px;
     width: 200px;
     object-fit: contain;
@@ -296,53 +351,78 @@ ul li{
     margin-left: auto;
     margin-right: auto;
 }
-#comment-username{
+
+#comment-username {
     text-align: center;
     color: white;
     font-family: 'Handlee', cursive;
     font-size: 3vh;
-
-
 }
-.comment-comment{
-    color:#ffc703;
+
+.comment-comment {
+    color: #ffc703;
     font-size: 1.7vh;
     font-family: 'Handlee', cursive;
 }
-#c{
+
+#c {
     outline: 2px solid #ffc703;
 }
-#comment-rating-by-user{
+
+#comment-rating-by-user {
     color: #ffc703;
     font-size: 3vh;
     font-family: 'Handlee', cursive;
 }
-.sc{
+
+.sc {
     color: #ffc703;
     font-size: 1.5vh;
 }
-#send-feedback-btn{
+
+#send-feedback-btn {
     padding: 1%;
     font-size: 2vh;
     background-color: #133831;
     color: #ffc703;
     font-family: 'Handlee', cursive;
     font-weight: 900;
-    
+
 }
-#register-link, #login-link{
+
+#register-link,
+#login-link {
     background-color: #F7C35F;
     font-size: 1.5vh;
     color: #023831;
     font-weight: 700;
 }
-#right{
+
+#right {
     background-color: #F7C35F;
     height: 100vh;
     width: 100%;
 }
-#left{
+
+#left {
     background-color: #023831;
     height: 100vh;
     width: 100%;
+}
+
+#register-page {
+    background-image: url("/static/images/tiny.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 94.5vh;
+
+}
+
+#register-card {
+    
+}
+.caption{
+    color: #023831;
+    font-size: 1.5vh;
+    font-weight: 700;
 }
