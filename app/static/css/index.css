@@ -485,4 +485,14 @@ hr{
     margin-bottom: 1%;
 
 }
-/* register card-styling */
+/* drop-down card-styling */
+.dropdown-menu{
+    background-color: #f7c35f;
+    width: 300px;
+    height: 220px;
+}
+.dropdown-item{
+    color: #023831;
+    font-size: 2vh;
+    line-height: 1.8;
+}
