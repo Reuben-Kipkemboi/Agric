@@ -1,10 +1,10 @@
 {% extends "public/base.html" %}
 {% block title %}Profile Page{% endblock title %}
 {% block content %}
-<div class="container d-flex justify-content-center align-items-center">
+<div class="container-fluid d-flex justify-content-center align-items-center">
     <div class="col-md-6 mx-auto">
         <h4 class="text-center" id="welcome-profile">Welcome {{user.username}}</h4>
-        <div class="member mx-auto">
+        <div class="member">
             <img src="{{request.user.profile.profile_pic.url}}" class="rounded-circle border border-secondary"
                 alt="{{request.user.username}}" id="profile_pic">
             <h4>{{request.user.first_name}} {{request.user.last_name}}</h4>
@@ -39,9 +39,9 @@
 
             </div>
             <p class="text-center">
-                <a href="{% url 'update' %}"><button type="button" class="btn mx-auto" id="edit-profile-btn">Edit profile</button></a>
+                <a href="{% url 'update' %}"><button type="button" class="btn mx-auto" id="edit-profile-btn"><i class="fas fa-pen-fancy"></i> Edit profile</button></a>
 
-                <a href="{% url 'home' %}"><button type="button" class="btn " id="back-home-btn">Back  Home</button></a>
+                <a href="{% url 'home' %}"><button type="button" class="btn " id="back-home-btn"><i class="fas fa-chevron-left"></i> Back  Home</button></a>
             </p>
         </div>
     </div>
