@@ -222,6 +222,13 @@ def user_single_machine(request, machinery_id):
 
     return render(request, 'public/single_machine.html', {'single_machine': single_machine})
 
+def owner_single_machine(request, machinery_id):
+    single_machine = Machinery.objects.get(id=machinery_id)
+    current_user = request.user
+    user = User.objects.get(username=current_user.username)
+
+    return render(request, 'public/single_machine.html', {'owner_single_machine': single_machine})
+
 
 def comment(request, machinery_id):
     current_user = request.user

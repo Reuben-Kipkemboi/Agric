@@ -38,6 +38,8 @@ urlpatterns = [
     
     path('user_machinery/<int:machinery_id>/', views.user_single_machine, name='single_machine'),
     
+    path('owner_machinery/<int:machinery_id>/', views.owner_single_machine, name='owner_single_machine'),
+    
     path('comment/<int:machinery_id>', views.comment, name='comment'),
     
     path('hire/<int:machinery_id>', views.order, name='order'),
