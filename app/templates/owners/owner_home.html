@@ -2,15 +2,8 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid">
-  <div class="row mb-4">
-    <div class="col-md-3 mx-auto">
-      <div class="card">
-        <a href="{% url 'add' %}" class="btn btn-outline success">Welcome</a>
-      </div>
-    </div>
-  </div>
   <div class="col-md-12">
-    <P class="text-center p-3 fs-4">Featured machinery</P>
+    <P class="text-center featured-machinery">Featured machinery</P>
     <div class="row" id="owner-page">
       {% for single in machinery %}
       <div class="col-sm-5 mx-auto mb-4">
@@ -19,7 +12,7 @@
           <div class="card-body">
             <h5 class="card-title fw-bold text-black">{{single.machinery_name|capfirst}}</h5>
             <p class="card-text">{{single.machinery_properties|capfirst}}.</p>
-            <a href="{% url 'single' single.id %}" class="btn btn-primary">Details</a>
+            <a href="{% url 'single' single.id %}" class="btn btn-block details-btn">Details</a>
             
           </div>
         </div>

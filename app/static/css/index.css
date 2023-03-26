@@ -546,3 +546,22 @@ hr{
     background-color: #ffffff;
     padding: 2%;
 }
+/* owners panel styling */
+.featured-machinery{
+    color: #023831;
+    font-weight: 900;
+    font-size:4vh;
+    font-family: 'Handlee', cursive;
+}
+.details-btn{
+    background-color: #023831;
+    color: #F7C35F;
+    font-family: 'Handlee', cursive;
+    font-weight: 900;
+    font-size: 2vh;
+
+}
+.details-btn:hover{
+    color: #ffffff;
+    background-color: #F7C35F;
+}
