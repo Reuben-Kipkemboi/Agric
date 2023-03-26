@@ -174,7 +174,6 @@
     {% for comment in comments %}
     <div class="col-md-3 mx-auto">
       <div class="card p-4" id="comment-card">
-
         {% if request.user.profile.profile_pic %}
         <img src="{{request.user.profile.profile_pic.url}}" class="rounded-circle" alt="User" loading="lazy"
           id="person-commenting" />

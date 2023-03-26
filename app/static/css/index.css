@@ -218,14 +218,16 @@ ul li {
 #comment-card {
     background-color: #133831;
     text-align: center;
+    border-top: 6px solid #F7C35F;
 }
 
 #clients {
     padding: 2%;
-    font-size: 4vh;
+    font-size: 3vh;
     text-align: center;
-    border-right: 2px solid #133831;
     color: #133831;
+    font-family: 'Handlee' , cursive;
+    font-weight: 900;
 
 }
 
