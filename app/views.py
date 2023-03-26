@@ -13,6 +13,10 @@ def home(request):
     comments= Feedback.objects.all()
     return render(request, 'public/index.html', {'comments':comments})
 
+def owners_home(request):
+    comments= Feedback.objects.all()
+    return render(request, 'owners/owner_home.html', {'comments':comments})
+
 
 def services(request):
     machineries = Machinery.objects.all()
@@ -83,6 +87,13 @@ def profile(request):
 
     return render(request, 'profile/profile.html', {"users": users})
 
+def owner_profile(request):
+    users = User.objects.all()
+    current_user = request.user
+    # profile = get_object_or_404(Profile,user=request.user)
+
+    return render(request, 'profile/owner_profile.html', {"users": users})
+
 
 def update_profile(request):
     # profiles= Profile.objects.get(user=request.user)
@@ -96,9 +107,17 @@ def update_profile(request):
         form = ProfileUpdateForm(instance=request.user.profile)
     return render(request, 'profile/update_profile.html', {'form': form})
 
-
-# def owners(request):
-#     return render (request, 'owner.html')
+def owner_update_profile(request):
+    # profiles= Profile.objects.get(user=request.user)
+    if request.method == 'POST':
+        userprofileform = ProfileUpdateForm(
+            request.POST, request.FILES, instance=request.user.profile)
+        if userprofileform.is_valid():
+            userprofileform.save()
+            return redirect(to='owner_profile')
+    else:
+        form = ProfileUpdateForm(instance=request.user.profile)
+    return render(request, 'profile/owner_update_profile.html', {'form': form})
 
 # owners html
 def owners(request):

@@ -5,6 +5,8 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
     
+    # path('owners-home/', views.owners_home, name='owners_home'),
+    
     # path('signup/', views.base_register, name='signup'),
     
     
@@ -21,7 +23,11 @@ urlpatterns = [
     
     path('profile/', views.profile, name='profile'),
     
+    path('owner/profile/', views.owner_profile, name='owner_profile'),
+    
     path('update_profile/', views.update_profile, name ='update'),
+    
+    path('owner/update_profile/', views.owner_update_profile, name ='owner_update'),
     
     path('owner_home/', views.owners, name='owner'),
     
