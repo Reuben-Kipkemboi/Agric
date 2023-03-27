@@ -3,16 +3,17 @@
 {% load bootstrap4 %}
 {% block content %}
 
-<div class="container-fluid mt-5 mb-3">
+<div class="container-fluid d-flex justify-content-center align-items-center mt-5 mb-3">
     <div class="col-md-7 mx-auto shadow mb-4">
         <h1 id="order-title" class="text-center">Machinery Hire Form</h1>
 
         <div class="p-4 form_container">
             <form action="" method="POST">
                 {% csrf_token %}
-                <div class="col-6 offset 3 mb-3">{% bootstrap_form form3 %}</div>
+                <div class="col-8 offset 3 p-3">
+                    {% bootstrap_form form3 form_group_class='order-form-group' %}</div>
 
-                <button type="submit" class="btn btn-warning fw-bold">Hire Machinery</button>
+                <button type="submit" class="btn btn-block btn-warning fw-bold" id="hire-machinery-btn">Hire Machinery</button>
             </form>
         </div>
     </div>

@@ -200,7 +200,8 @@
     <div class="container">
       <div class="section-title">
         <h2 id="contact-details-header">Contact</h2>
-        <p class="love-to-hear">We'd love to hear from you, What aspects should we had and incase of any complaints or feedback about our
+        <p class="love-to-hear">We'd love to hear from you, What aspects should we had and incase of any complaints or
+          feedback about our
           services.Kindly reach out to us:</p>
       </div>
 
@@ -234,31 +235,31 @@
 
         <div class="col-lg-8 mt-5 mt-lg-0" id="feedback-from-user">
           <div id="subscribe-form">
-              <section class="subscribe">
-                <form class="feedback-form" method="POST">
-                  {% csrf_token %}
-                  <!-- Name input -->
-                  <div class="form-outline mb-4 p-2">
-                    <input type="text" id="form4Example1" class="form-control" />
-                    <label class="form-label  fs-5" for="form4Example1">Name</label>
-                  </div>
+            <section class="subscribe">
+              <form class="feedback-form" method="POST">
+                {% csrf_token %}
+                <!-- Name input -->
+                <div class="form-outline mb-4 p-2">
+                  <input type="text" id="form4Example1" class="form-control" />
+                  <label class="form-label  fs-5" for="form4Example1">Name</label>
+                </div>
 
-                  <!-- Email input -->
-                  <div class="form-outline mb-4 p-2">
-                    <input type="email" id="email" class="form-control" name="email" />
-                    <label class="form-label fs-4" for="form4Example2">Email address</label>
-                  </div>
+                <!-- Email input -->
+                <div class="form-outline mb-4 p-2">
+                  <input type="email" id="email" class="form-control" name="email" />
+                  <label class="form-label fs-4" for="form4Example2">Email address</label>
+                </div>
 
-                  <!-- Message input -->
-                  <div class="form-outline mb-4">
-                    <textarea class="form-control" id="form4Example3" rows="8" name="feedback"></textarea>
-                    <label class="form-label fs-4" for="form4Example3">Message</label>
-                  </div>
-                  <!-- Submit button -->
-                  <button type="submit" class="btn btn-block" id="send-feedback-btn"> <i
-                      class="fa-solid fa-paper-plane "></i>Send feedback</button>
-                </form>
-              </section>
+                <!-- Message input -->
+                <div class="form-outline mb-4">
+                  <textarea class="form-control" id="form4Example3" rows="8" name="feedback"></textarea>
+                  <label class="form-label fs-4" for="form4Example3">Message</label>
+                </div>
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-block" id="send-feedback-btn"> <i
+                    class="fa-solid fa-paper-plane "></i>Send feedback</button>
+              </form>
+            </section>
           </div>
 
         </div>

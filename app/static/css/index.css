@@ -659,3 +659,24 @@ hr{
     color: #fdc730;
     font-size: 2vh;
 }
+.order-form-group label{
+    font-weight: bold;
+    color: #023831;
+    font-size: 2vh;
+      
+} 
+.order-form-group input {
+    border: none;
+    border-bottom: 3px solid #ffc703;
+    border-radius: 0;
+    box-shadow: none;
+}
+#hire-machinery-btn{
+    font-size: 2vh;
+    color: #023831;
+}
+#hire-machinery-btn:hover{
+    color: #ffffff;
+    background-color: #023831;
+
+}
