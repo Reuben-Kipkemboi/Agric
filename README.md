@@ -140,7 +140,7 @@ Open the application on your browser `127.0.0.1:8000`.
 
 ## Live Site
 
-#### https://okoafarm.herokuapp.com/
+<!-- #### https://okoafarm.herokuapp.com/ -->
 
 ## Project slides 
 
@@ -153,3 +153,5 @@ Open the application on your browser `127.0.0.1:8000`.
 <p align = "center">
     &copy; 2022 @Reuben Kipkemboi.
 </p>
+
+
