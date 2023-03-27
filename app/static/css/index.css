@@ -446,9 +446,9 @@ ul li {
     color: #023831;
     font-size: 2vh;
 }
-.fa-solid{
+.solidd-icons{
     color: #023831;
-    font-size: 2vh;
+    font-size: 2.5vh;
 }
 .info{
     padding: 4%;
@@ -654,4 +654,8 @@ hr{
 }
 #description-of-machinery{
     font-size: 1.8vh;
+}
+.service-rate-by-user{
+    color: #fdc730;
+    font-size: 2vh;
 }
