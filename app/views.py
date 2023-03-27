@@ -183,15 +183,35 @@ def user_single_machine(request, machinery_id):
     single_machine = Machinery.objects.get(id=machinery_id)
     current_user = request.user
     user = User.objects.get(username=current_user.username)
+    
+    current_user = request.user
+    user = User.objects.get(username=current_user.username)
+    machine = Machinery.objects.get(id=machinery_id)
+    form2 = CommentForm()
+    
+    if request.method == 'POST':
+        form2 = CommentForm(request.POST)
+        if form2.is_valid():
 
-    return render(request, 'public/single_machine.html', {'single_machine': single_machine})
+            comment = form2.save(commit=False)
+
+            comment.user_id = user
+            comment.machinery_id = machine
+
+            comment.save()
+
+            return redirect('single_machine',machinery_id)
+        else:
+            form2 = CommentForm()
+
+    return render(request, 'public/single_machine.html', {'single_machine': single_machine, 'form2': form2, 'machine': machine})
 
 def owner_single_machine(request, machinery_id):
     single_machine = Machinery.objects.get(id=machinery_id)
     current_user = request.user
     user = User.objects.get(username=current_user.username)
 
-    return render(request, 'public/single_machine.html', {'owner_single_machine': single_machine})
+    return render(request, 'public/single_machine.html', {'owner_single_machine': single_machine,})
 
 
 def comment(request, machinery_id):
@@ -214,8 +234,7 @@ def comment(request, machinery_id):
             return redirect('single_machine',machinery_id)
         else:
             form2 = CommentForm()
-
-    return render(request, 'public/comment.html', {'form2': form2, 'machine': machine})
+    return render(request, 'public/single_machine.html', {'form2': form2, 'machine': machine})
 
 
 #order form

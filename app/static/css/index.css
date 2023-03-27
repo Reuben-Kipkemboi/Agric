@@ -368,7 +368,8 @@ ul li {
 }
 
 #c {
-    outline: 2px solid #ffc703;
+    border: none;
+    outline: 3px solid #ffc703;
 }
 
 #comment-rating-by-user {
@@ -378,8 +379,11 @@ ul li {
 }
 
 .sc {
-    color: #ffc703;
-    font-size: 1.5vh;
+    color: #023831;
+    font-size: 1.8vh;
+    font-weight: bold
+    ;
+
 }
 
 #send-feedback-btn {
