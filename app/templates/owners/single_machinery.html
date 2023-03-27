@@ -31,9 +31,10 @@
                     </div>
                     <div class="row">
                         <div class="card">
-                            <h5>Orders</h5>
+                            <h5 class="fw-bold fs-3">Orders</h5>
                             {% for order in orders %}
-                            <p>{{order.customer_name}}</p>
+                            <p class="fs-4"><b>1. {{order.customer_name}}</b> Requested for : <b>{{order.service}} service</b></p>
+                            <p></p>
                             {% endfor %}
                         </div>
                     </div>
@@ -43,10 +44,13 @@
                     <div class="card" id="button-card">
                         <div class="row mt-4">
                             <div class="col-md-6">
-                                <a href="/update/{{single_machines.id}}/details" class="btn btn-block" id="update-btn"> <i class="fas fa-pen-nib"></i> Update Machinery Details</a>
+                                <a href="/update/{{single_machines.id}}/details" class="btn btn-block" id="update-btn">
+                                    <i class="fas fa-pen-nib"></i> Update Machinery Details</a>
                             </div>
                             <div class="col-md-6">
-                                <a href="/delete/{{single_machines.id}}" class="btn btn-danger btn-block" id="remove-btn"> <i class="fas fa-trash"></i> Remove {{single_machines.machinery_name}}</a>
+                                <a href="/delete/{{single_machines.id}}" class="btn btn-danger btn-block"
+                                    id="remove-btn"> <i class="fas fa-trash"></i> Remove
+                                    {{single_machines.machinery_name}}</a>
                             </div>
                         </div>
                     </div>
