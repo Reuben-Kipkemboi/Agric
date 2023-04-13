@@ -140,7 +140,7 @@ Open the application on your browser `127.0.0.1:8000`.
 
 ## Live Site
 
-<!-- #### https://okoafarm.herokuapp.com/ -->
+#### https://web-production-0c0a.up.railway.app/
 
 ## Project slides 
 
