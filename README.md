@@ -154,4 +154,3 @@ Open the application on your browser `127.0.0.1:8000`.
     &copy; 2022 @Reuben Kipkemboi.
 </p>
 
-
