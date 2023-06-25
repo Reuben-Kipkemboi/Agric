@@ -446,6 +446,7 @@ ul li {
 
     /* contact section */
     #contact-details-header {
+        margin-top: 5%;
         color: #023831;
         font-size: 3vh;
         font-family: 'Handlee', cursive;
@@ -454,7 +455,7 @@ ul li {
 
     .love-to-hear {
         color: #023831;
-        font-size: 2vh;
+        font-size: 2.5vh;
 
     }
 
