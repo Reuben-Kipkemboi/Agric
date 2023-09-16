@@ -22,19 +22,33 @@ cloudinary.config(
 #        'default': dj_database_url.parse(env('DATABASE_URL'))
 # }
 import os
+from decouple import config
+DEBUG = 'RENDER' not in os.environ
 
-# SECRET_KEY='django-insecure-%u8)5i-3yrac@(!eujn=c_jl5$2&u)zo0j+kmei_1t_vz981wh'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        # 'HOST': config('DB_HOST'),
-        # 'PORT': config('DB_PORT'),
-    }
-}
+
+# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Feel free to alter this value to suit your needs.
+#         default='postgres://agric_user:4sQABfrsf3gzOYeBy21Pt9jMEsvmAmip@dpg-cjnnrn7jbvhs73fj5f9g-a.oregon-postgres.render.com/agric',
+#         conn_max_age=600
+#     )
+# }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': config('DB_NAME'),
+#         'USER': config('DB_USER'),
+#         'PASSWORD': config('DB_PASSWORD'),
+#         # 'HOST': config('DB_HOST'),
+#         # 'PORT': config('DB_PORT'),
+#     }
+# }
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
@@ -60,21 +74,26 @@ DATABASES = {
 #            'NAME': config('DB_NAME'),
 #            'USER': config('DB_USER'),
 #            'PASSWORD': config('DB_PASSWORD'),
-#            'HOST': config('DB_HOST'),
+#            'HOST': config('DB_HOST', default='localhost'),
 #            'PORT': '',
+           
 #        }
        
 #    }
 # # production
 # else:
-#    DATABASES = {
-#        'default': dj_database_url.config(
-#            default=config('DATABASE_URL')
-#        )
-#    }
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+        'sslmode': 'require'  # To require SSL/TLS encryption
+        'sslmode': 'prefer'  # To use SSL/TLS if available but not require it
+        'sslmode': 'disable'  # To disable SSL/TLS encryption
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+    )
+}
+
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
