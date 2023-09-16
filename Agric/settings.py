@@ -23,21 +23,31 @@ cloudinary.config(
 # }
 import os
 
-SECRET_KEY='django-insecure-%u8)5i-3yrac@(!eujn=c_jl5$2&u)zo0j+kmei_1t_vz981wh'
+# SECRET_KEY='django-insecure-%u8)5i-3yrac@(!eujn=c_jl5$2&u)zo0j+kmei_1t_vz981wh'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT'),
-        'OPTIONS': {
-            'sslmode': 'require',  # This enforces SSL/TLS encryption
-        },
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        # 'HOST': config('DB_HOST'),
+        # 'PORT': config('DB_PORT'),
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DB_NAME'),
+#         'USER': os.environ.get('DB_USER'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD'),
+#         'HOST': os.environ.get('DB_HOST'),
+#         'PORT': os.environ.get('DB_PORT'),
+#         'OPTIONS': {
+#             'sslmode': 'require',  # This enforces SSL/TLS encryption
+#         },
+#     }
+# }
 
 # MODE=config("MODE", default="dev")
 # SECRET_KEY = config('SECRET_KEY')
