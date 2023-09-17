@@ -85,15 +85,14 @@ DEBUG = 'RENDER' not in os.environ
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
-        'sslmode': 'require'  # To require SSL/TLS encryption
-        'sslmode': 'prefer'  # To use SSL/TLS if available but not require it
-        'sslmode': 'disable'  # To disable SSL/TLS encryption
+        'OPTIONS': {
+            'sslmode': 'require',  # To require SSL/TLS encryption
+        },
+        
 
     )
 }
 
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
@@ -224,4 +223,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
 
-CSRF_TRUSTED_ORIGINS = ["https://okoafarm.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = [""]
