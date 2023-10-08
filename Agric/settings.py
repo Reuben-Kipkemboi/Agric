@@ -64,7 +64,7 @@ DEBUG = 'RENDER' not in os.environ
 # }
 
 # MODE=config("MODE", default="dev")
-# SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 # DEBUG = config('DEBUG', default=False, cast=bool)
 # # development
 # if config('MODE')=="dev":
